@@ -1,0 +1,4207 @@
+<script>
+	const prices = {
+		"Газосиликатный блок": {
+			base: 3000000,
+			draft: 4000000,
+			finish: 5000000
+		},
+		"Керамзитобетонный блок": {
+			base: 6000000,
+			draft: 7000000,
+			finish: 8000000
+		},
+		"Керамический блок": {
+			base: 9000000,
+			draft: 10000000,
+			finish: 11000000
+		},
+		"Кирпич": {
+			base: 12000000,
+			draft: 13000000,
+			finish: 14000000
+		},
+	}
+</script>
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>ladus project</title>
+		<meta
+			name="description"
+			content="Startup HTML template OptimizedHTML 5"
+		/>
+
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<link rel="icon" href="images/favicon.png" />
+		<meta property="og:image" content="images/dist/preview.jpg" />
+
+		<link rel="stylesheet" href="libs/Swiper/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="css/app.min.css" />
+	</head>
+
+	<body>
+	<div class="preheader">
+	<div class="header__content">
+		<button
+			class="preheader__link"
+			data-href="#calculator"
+			data-scroll=".project-calculator-section"
+		>
+			Строим дома в ипотеку! Наша компания аккредитована в ПАО “Сбербанк”
+			<svg
+				width="20"
+				height="20"
+				viewBox="0 0 20 20"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M4.16699 10.0001H15.8337M15.8337 10.0001L10.0003 4.16675M15.8337 10.0001L10.0003 15.8334"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>
+		</button>
+		<div class="preheader__contacts">
+			<a href="tel:+79191444414">+7 (919) 144-44-14 </a>
+			<a href="tel:+79174244247">+7 (917) 424-42-47</a>
+		</div>
+	</div>
+</div>
+<header class="header">
+	<div class="header__content">
+		<a href="index.html" class="header__logo">
+			<img src="images/logos/logo.svg" alt="" />
+		</a>
+		<nav class="header__menu">
+			
+				<button data-scroll='.project-heading-section' class="header__menu__item">О ПРОЕКТЕ</button>
+				<button data-scroll='.project-specifications-section' class="header__menu__item">ХАРАКТЕРИСТИКИ</button>
+				<button data-scroll='.configuration-section' class="header__menu__item">КОМПЛЕКТАЦИЯ</button>
+				<button data-scroll='.calculator-section' class="header__menu__item">Рассчитайте ипотеку</button>
+			
+			
+		</nav>
+		<button class="header__hamburger">
+			<svg
+				width="40"
+				height="40"
+				viewBox="0 0 40 40"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M5 30V26.6667H35V30H5ZM5 21.6667V18.3333H35V21.6667H5ZM5 13.3333V10H35V13.3333H5Z"
+					fill="currentColor"
+				/>
+			</svg>
+		</button>
+	</div>
+</header>
+<div class="mobile-menu">
+	<button class="mobile-menu__back">
+		<svg
+			viewBox="0 0 16 16"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<path
+				d="M12.6666 7.99992H3.33325M3.33325 7.99992L7.99992 12.6666M3.33325 7.99992L7.99992 3.33325"
+				stroke="currentColor"
+				stroke-width="1.6"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+			/>
+		</svg>
+		<span>Назад</span>
+	</button>
+	<nav class="mobile-menu__nav">
+		
+		<button data-scroll='.project-heading-section'>О ПРОЕКТЕ</button>
+		<button data-scroll='.project-specifications-section'>ХАРАКТЕРИСТИКИ</button>
+		<button data-scroll='.configuration-section'>КОМПЛЕКТАЦИЯ</button>
+		<button data-scroll='.calculator-section'>Рассчитайте ипотеку</button>
+		
+		
+	</nav>
+	<div class='mobile-menu__footer'>
+		<div class='mobile-menu__mortgage'>
+			<p>Строим дома в ипотеку! Наша компания аккредитована в ПАО “Сбербанк”</p>
+			<button>
+				<span>Подробнее</span>
+				<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M3.33325 8.00004H12.6666M12.6666 8.00004L7.99992 3.33337M12.6666 8.00004L7.99992 12.6667" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+		</div>
+		<div class='mobile-menu__contacts'>
+			<a href=''>+7 (919) 144-44-14 </a>
+			<a href=''>+7 (917) 424-42-47</a>
+		</div>
+	</div>
+</div>
+
+	<main class='main content'>
+
+<section class='project-heading-section'>
+	<div class='project-heading-section__main'>
+		<section class="project-slider-section">
+	<div class="project-slider-section__header">
+		<div class="project-slider-section__header__info">
+			<p class="project-slider-section__header__caption">
+				Комфорт 67,9 м²
+			</p>
+			<p class="project-slider-section__header__subcaption">
+				Размер 12.5х13 м
+			</p>
+		</div>
+		<span
+			class="project-slider-section__badge project-slider-section__badge_desktop"
+		>
+			<span><svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M26.666 16.5003V29.8337H5.33268V16.5003M15.9993 29.8337V9.83366M15.9993 9.83366H9.99935C9.11529 9.83366 8.26745 9.48247 7.64233 8.85735C7.01721 8.23223 6.66602 7.38438 6.66602 6.50033C6.66602 5.61627 7.01721 4.76842 7.64233 4.1433C8.26745 3.51818 9.11529 3.16699 9.99935 3.16699C14.666 3.16699 15.9993 9.83366 15.9993 9.83366ZM15.9993 9.83366H21.9993C22.8834 9.83366 23.7313 9.48247 24.3564 8.85735C24.9815 8.23223 25.3327 7.38438 25.3327 6.50033C25.3327 5.61627 24.9815 4.76842 24.3564 4.1433C23.7313 3.51818 22.8834 3.16699 21.9993 3.16699C17.3327 3.16699 15.9993 9.83366 15.9993 9.83366ZM2.66602 9.83366H29.3327V16.5003H2.66602V9.83366Z" stroke="#F3F3F3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>
+			При покупке дома</span>
+			<b>кухня в подарок</b>
+		</span>
+	</div>
+	<div class="swiper project-slider-section__big-slider">
+		<div class="swiper-wrapper">
+			<!-- Доп. класс image-cover если изображение нужно растянуть на весь слайд -->
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide image-cover"
+				data-popup="slider"
+			>
+				<img src="images/slides/1.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide"
+				data-popup="slider"
+			>
+				<img src="images/slides/2.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide"
+				data-popup="slider"
+			>
+				<img src="images/slides/3.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide image-cover"
+				data-popup="slider"
+			>
+				<img src="images/slides/1.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide"
+				data-popup="slider"
+			>
+				<img src="images/slides/2.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide"
+				data-popup="slider"
+			>
+				<img src="images/slides/3.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide image-cover"
+				data-popup="slider"
+			>
+				<img src="images/slides/1.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide"
+				data-popup="slider"
+			>
+				<img src="images/slides/2.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide"
+				data-popup="slider"
+			>
+				<img src="images/slides/3.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide image-cover"
+				data-popup="slider"
+			>
+				<img src="images/slides/1.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide"
+				data-popup="slider"
+			>
+				<img src="images/slides/2.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__big-slider__slide"
+				data-popup="slider"
+			>
+				<img src="images/slides/3.png" alt="" />
+			</div>
+		</div>
+		<button class="swiper-button-prev">
+			<svg
+				width="20"
+				height="20"
+				viewBox="0 0 20 20"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M12.5 15L7.5 10L12.5 5"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>
+		</button>
+		<button class="swiper-button-next">
+			<svg
+				width="20"
+				height="20"
+				viewBox="0 0 20 20"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<path
+					d="M7.5 15L12.5 10L7.5 5"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</svg>
+		</button>
+	</div>
+	<div class="swiper project-slider-section__preview-slider">
+		<div class="swiper-wrapper">
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/1.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/2.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/3.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/1.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/2.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/3.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/1.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/2.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/3.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/1.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/2.png" alt="" />
+			</div>
+			<div
+				class="swiper-slide project-slider-section__preview-slider__slide"
+			>
+				<img src="images/slides/3.png" alt="" />
+			</div>
+		</div>
+	</div>
+	<span
+		class="project-slider-section__badge project-slider-section__badge_mobile"
+	>
+		<span><svg viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<g clip-path="url(#clip0_112_10772)">
+				<path
+					d="M13.8335 8.49992V15.1666H3.16683V8.49992M8.50016 15.1666V5.16658M8.50016 5.16658H5.50016C5.05814 5.16658 4.63421 4.99099 4.32165 4.67843C4.00909 4.36587 3.8335 3.94195 3.8335 3.49992C3.8335 3.05789 4.00909 2.63397 4.32165 2.32141C4.63421 2.00885 5.05814 1.83325 5.50016 1.83325C7.8335 1.83325 8.50016 5.16658 8.50016 5.16658ZM8.50016 5.16658H11.5002C11.9422 5.16658 12.3661 4.99099 12.6787 4.67843C12.9912 4.36587 13.1668 3.94195 13.1668 3.49992C13.1668 3.05789 12.9912 2.63397 12.6787 2.32141C12.3661 2.00885 11.9422 1.83325 11.5002 1.83325C9.16683 1.83325 8.50016 5.16658 8.50016 5.16658ZM1.8335 5.16658H15.1668V8.49992H1.8335V5.16658Z"
+					stroke="currentColor"
+					stroke-width="2"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				/>
+			</g>
+			<defs>
+				<clipPath id="clip0_112_10772">
+					<rect
+						width="16"
+						height="16"
+						fill="white"
+						transform="translate(0.5 0.5)"
+					/>
+				</clipPath>
+			</defs>
+		</svg>
+		При покупке дома</span>
+		<b>кухня в подарок</b>
+	</span>
+	<div
+		class="pseudo-radio pseudo-radio_mobile-wrap project-slider-section__radio"
+		data-radio="variant"
+	>
+		<button data-option="Газосиликатный блок" class="active">
+			<span>Газосиликатный блок</span>
+		</button>
+		<button data-option="Керамзитобетонный блок">
+			<span>Керамзитобетонный блок</span>
+		</button>
+		<button data-option="Керамический блок">
+			<span>Керамический блок</span>
+		</button>
+		<button data-option="Кирпич">
+			<span>Кирпич</span>
+		</button>
+	</div>
+	<div class="variations-block" data-radio-name="variant">
+		<div data-radio-option="Газосиликатный блок" class="active">
+			<div class="project-slider-section__descr-price-container">
+				<p class="project-slider-section__description">
+					Классический одноэтажный дом с продуманной планировкой: две
+					уютные спальни, просторная гостиная и большой холл создадут
+					идеальное пространство для комфортной жизни. В этом доме
+					каждый уголок продуман до мелочей, чтобы вы могли
+					наслаждаться уютом и удобством каждый день.
+				</p>
+				<div class="project-slider-section__prices">
+					<div class="project-slider-section__price">
+						<p>Цена</p>
+						<p><b>от 7 000 000 <span class="ruble">i</span></b></p>
+					</div>
+					<div
+						class="project-slider-section__price project-slider-section__price_recommended"
+					>
+						<p>В ипотеку</p>
+						<p><b>от 70 000 <span class="ruble">i</span>/мес.</b></p>
+					</div>
+				</div>
+			</div>
+			<div class="project-slider-section__features">
+				<div>
+					<img src="images/icons/plan.png" alt="" />
+					<span>1 Этаж</span>
+				</div>
+				<div>
+					<img src="images/icons/bed.png" alt="" />
+					<span>2 Спальни</span>
+				</div>
+				<div>
+					<img src="images/icons/bathtub.png" alt="" />
+					<span>1 Санузел</span>
+				</div>
+				<div>
+					<img src="images/icons/sofa.png" alt="" />
+					<span>1 Гостинная</span>
+				</div>
+			</div>
+		</div>
+		<div data-radio-option="Керамзитобетонный блок">
+			<div class="project-slider-section__descr-price-container">
+				<p class="project-slider-section__description">
+					Классический одноэтажный дом с продуманной планировкой: две
+					уютные спальни, просторная гостиная и большой холл создадут
+					идеальное пространство для комфортной жизни. В этом доме
+					каждый уголок продуман до мелочей, чтобы вы могли
+					наслаждаться уютом и удобством каждый день.
+				</p>
+				<div class="project-slider-section__prices">
+					<div class="project-slider-section__price">
+						<p>Цена</p>
+						<p><b>от 5 000 000 <span class="ruble">i</span></b></p>
+					</div>
+					<div
+						class="project-slider-section__price project-slider-section__price_recommended"
+					>
+						<p>В ипотеку</p>
+						<p><b>от 50 000 <span class="ruble">i</span>/мес.</b></p>
+					</div>
+				</div>
+			</div>
+			<div class="project-slider-section__features">
+				<div>
+					<img src="images/icons/plan.png" alt="" />
+					<span>2 Этаж</span>
+				</div>
+				<div>
+					<img src="images/icons/bed.png" alt="" />
+					<span>1 Спальни</span>
+				</div>
+				<div>
+					<img src="images/icons/bathtub.png" alt="" />
+					<span>2 Санузел</span>
+				</div>
+				<div>
+					<img src="images/icons/sofa.png" alt="" />
+					<span>2 Гостинная</span>
+				</div>
+			</div>
+		</div>
+		<div data-radio-option="Керамический блок">
+			<div class="project-slider-section__descr-price-container">
+				<p class="project-slider-section__description">
+					Классический одноэтажный дом с продуманной планировкой: две
+					уютные спальни, просторная гостиная и большой холл создадут
+					идеальное пространство для комфортной жизни. В этом доме
+					каждый уголок продуман до мелочей, чтобы вы могли
+					наслаждаться уютом и удобством каждый день.
+				</p>
+				<div class="project-slider-section__prices">
+					<div class="project-slider-section__price">
+						<p>Цена</p>
+						<p><b>от 6 000 000 <span class="ruble">i</span></b></p>
+					</div>
+					<div
+						class="project-slider-section__price project-slider-section__price_recommended"
+					>
+						<p>В ипотеку</p>
+						<p><b>от 60 000 <span class="ruble">i</span>/мес.</b></p>
+					</div>
+				</div>
+			</div>
+			<div class="project-slider-section__features">
+				<div>
+					<img src="images/icons/plan.png" alt="" />
+					<span>1 Этаж</span>
+				</div>
+				<div>
+					<img src="images/icons/bed.png" alt="" />
+					<span>1 Спальни</span>
+				</div>
+				<div>
+					<img src="images/icons/bathtub.png" alt="" />
+					<span>2 Санузел</span>
+				</div>
+				<div>
+					<img src="images/icons/sofa.png" alt="" />
+					<span>1 Гостинная</span>
+				</div>
+			</div>
+		</div>
+		<div data-radio-option="Кирпич">
+			<div class="project-slider-section__descr-price-container">
+				<p class="project-slider-section__description">
+					Классический одноэтажный дом с продуманной планировкой: две
+					уютные спальни, просторная гостиная и большой холл создадут
+					идеальное пространство для комфортной жизни. В этом доме
+					каждый уголок продуман до мелочей, чтобы вы могли
+					наслаждаться уютом и удобством каждый день.
+				</p>
+				<div class="project-slider-section__prices">
+					<div class="project-slider-section__price">
+						<p>Цена</p>
+						<p><b>от 5 500 000 <span class="ruble">i</span></b></p>
+					</div>
+					<div
+						class="project-slider-section__price project-slider-section__price_recommended"
+					>
+						<p>В ипотеку</p>
+						<p><b>от 40 000 <span class="ruble">i</span>/мес.</b></p>
+					</div>
+				</div>
+			</div>
+			<div class="project-slider-section__features">
+				<div>
+					<img src="images/icons/plan.png" alt="" />
+					<span>3 Этаж</span>
+				</div>
+				<div>
+					<img src="images/icons/bed.png" alt="" />
+					<span>1 Спальни</span>
+				</div>
+				<div>
+					<img src="images/icons/bathtub.png" alt="" />
+					<span>2 Санузел</span>
+				</div>
+				<div>
+					<img src="images/icons/sofa.png" alt="" />
+					<span>1 Гостинная</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<div class='popup slider-popup popup_without-inner popup_close-outside' data-popup-name='slider'>
+	<div class='popup__inner'>
+		<button class='popup__close'>
+			<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M36 12L12 36M12 12L36 36" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+		<div class="swiper slider-popup__slider">
+			<div class="swiper-wrapper">
+				<!-- Доп. класс image-cover если изображение нужно растянуть на весь слайд -->
+				<div class="swiper-slide slider-popup__slide image-cover">
+					<img
+						src='images/slides/1.png'
+						alt=''>
+				</div>
+				<div class="swiper-slide slider-popup__slide">
+					<img
+						src='images/slides/2.png'
+						alt=''>
+				</div>
+				<div class="swiper-slide slider-popup__slide">
+					<img
+						src='images/slides/3.png'
+						alt=''>
+				</div>
+				<div class="swiper-slide slider-popup__slide image-cover">
+					<img
+						src='images/slides/1.png'
+						alt=''>
+				</div>
+				<div class="swiper-slide slider-popup__slide">
+					<img
+						src='images/slides/2.png'
+						alt=''>
+				</div>
+				<div class="swiper-slide slider-popup__slide">
+					<img
+						src='images/slides/3.png'
+						alt=''>
+				</div>
+				<div class="swiper-slide slider-popup__slide image-cover">
+					<img
+						src='images/slides/1.png'
+						alt=''>
+				</div>
+				<div class="swiper-slide slider-popup__slide">
+					<img
+						src='images/slides/2.png'
+						alt=''>
+				</div>
+				<div class="swiper-slide slider-popup__slide">
+					<img
+						src='images/slides/3.png'
+						alt=''>
+				</div>
+				<div class="swiper-slide slider-popup__slide image-cover">
+					<img
+						src='images/slides/1.png'
+						alt=''>
+				</div>
+				<div class="swiper-slide slider-popup__slide">
+					<img
+						src='images/slides/2.png'
+						alt=''>
+				</div>
+				<div class="swiper-slide slider-popup__slide">
+					<img
+						src='images/slides/3.png'
+						alt=''>
+				</div>
+			</div>
+			<button class="swiper-button-prev">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+			<button class="swiper-button-next">
+				<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+		</div>
+	</div>
+</div>
+
+<!--
+.project-slider-section__
+-->
+
+		<section class='project-specifications-section'>
+	<p class='project-specifications-section__caption'>Характеристики</p>
+	<p class='project-specifications-section__subcaption'>Проект дома может меняться в зависимости от ваших предпочтений</p>
+	<div class="pseudo-radio project-specifications-section__radio" data-radio='specifications'>
+		<button data-option='Технические' class='active'>
+			<span>Технические</span>
+		</button>
+		<button data-option='Планировочные'>
+			<span>Планировочные</span>
+		</button>
+	</div>
+	<div class='variations-block' data-radio-name='variant'>
+		<div data-radio-option='Газосиликатный блок' class='active'>
+			<div class='variations-block' data-radio-name='specifications'>
+				<div data-radio-option='Технические' class='active'>
+					<div class='project-specifications-section__features'>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/blueprint.png'
+								alt=''>
+							<div>
+								<p>Общая площадь дома</p>
+								<p><b>86м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/home.png'
+								alt=''>
+							<div>
+								<p>Площадь застройки</p>
+								<p><b>58м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/house-plan-scale.png'
+								alt=''>
+							<div>
+								<p>Материал стен</p>
+								<p><b>Газосиликатный блок</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/mixed.png'
+								alt=''>
+							<div>
+								<p>Тип фундамента</p>
+								<p><b>Железобетонные сваи</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/roofing.png'
+								alt=''>
+							<div>
+								<p>Материал кровли</p>
+								<p><b>Металлочерепица</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/wall.png'
+								alt=''>
+							<div>
+								<p>Материал перегородок</p>
+								<p><b>Кирпич</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-radio-option='Планировочные'>
+					<div class='project-specifications-section__features'>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/height.png'
+								alt=''>
+							<div>
+								<p>Высота потолков</p>
+								<p><b>2,5м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/area.png'
+								alt=''>
+							<div>
+								<p>Количество этажей</p>
+								<p><b>Один, 67,9 м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/bed.png'
+								alt=''>
+							<div>
+								<p>Количество спален</p>
+								<p><b>Два. 12,41м² / 11,11м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/bathtub.png'
+								alt=''>
+							<div>
+								<p>Количество санузлов</p>
+								<p><b>Один. 4,75м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/kitchen.png'
+								alt=''>
+							<div>
+								<p>Кухня-гостинная</p>
+								<p><b>Да. 9,20м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/ladder.png'
+								alt=''>
+							<div>
+								<p>Лестница</p>
+								<p><b>Нет</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/balcony.png'
+								alt=''>
+							<div>
+								<p>веранда</p>
+								<p><b>Есть</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/boiler.png'
+								alt=''>
+							<div>
+								<p>бойлерная</p>
+								<p><b>Есть. 3,15м² </b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-radio-option='Керамзитобетонный блок'>
+			<div class='variations-block' data-radio-name='specifications'>
+				<div data-radio-option='Технические' class='active'>
+					<div class='project-specifications-section__features'>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/mixed.png'
+								alt=''>
+							<div>
+								<p>Тип фундамента</p>
+								<p><b>Железобетонные сваи</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/blueprint.png'
+								alt=''>
+							<div>
+								<p>Общая площадь дома</p>
+								<p><b>86м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/home.png'
+								alt=''>
+							<div>
+								<p>Площадь застройки</p>
+								<p><b>58м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/house-plan-scale.png'
+								alt=''>
+							<div>
+								<p>Материал стен</p>
+								<p><b>Газосиликатный блок</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/roofing.png'
+								alt=''>
+							<div>
+								<p>Материал кровли</p>
+								<p><b>Металлочерепица</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/wall.png'
+								alt=''>
+							<div>
+								<p>Материал перегородок</p>
+								<p><b>Кирпич</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-radio-option='Планировочные'>
+					<div class='project-specifications-section__features'>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/height.png'
+								alt=''>
+							<div>
+								<p>Высота потолков</p>
+								<p><b>2,5м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/area.png'
+								alt=''>
+							<div>
+								<p>Количество этажей</p>
+								<p><b>Один, 67,9 м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/bed.png'
+								alt=''>
+							<div>
+								<p>Количество спален</p>
+								<p><b>Два. 12,41м² / 11,11м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/bathtub.png'
+								alt=''>
+							<div>
+								<p>Количество санузлов</p>
+								<p><b>Один. 4,75м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/kitchen.png'
+								alt=''>
+							<div>
+								<p>Кухня-гостинная</p>
+								<p><b>Да. 9,20м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/ladder.png'
+								alt=''>
+							<div>
+								<p>Лестница</p>
+								<p><b>Нет</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/balcony.png'
+								alt=''>
+							<div>
+								<p>веранда</p>
+								<p><b>Есть</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/boiler.png'
+								alt=''>
+							<div>
+								<p>бойлерная</p>
+								<p><b>Есть. 3,15м² </b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-radio-option='Керамический блок'>
+			<div class='variations-block' data-radio-name='specifications'>
+				<div data-radio-option='Технические' class='active'>
+					<div class='project-specifications-section__features'>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/blueprint.png'
+								alt=''>
+							<div>
+								<p>Общая площадь дома</p>
+								<p><b>86м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/home.png'
+								alt=''>
+							<div>
+								<p>Площадь застройки</p>
+								<p><b>58м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/roofing.png'
+								alt=''>
+							<div>
+								<p>Материал кровли</p>
+								<p><b>Металлочерепица</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/wall.png'
+								alt=''>
+							<div>
+								<p>Материал перегородок</p>
+								<p><b>Кирпич</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/house-plan-scale.png'
+								alt=''>
+							<div>
+								<p>Материал стен</p>
+								<p><b>Газосиликатный блок</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/mixed.png'
+								alt=''>
+							<div>
+								<p>Тип фундамента</p>
+								<p><b>Железобетонные сваи</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-radio-option='Планировочные'>
+					<div class='project-specifications-section__features'>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/height.png'
+								alt=''>
+							<div>
+								<p>Высота потолков</p>
+								<p><b>2,5м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/area.png'
+								alt=''>
+							<div>
+								<p>Количество этажей</p>
+								<p><b>Один, 67,9 м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/bed.png'
+								alt=''>
+							<div>
+								<p>Количество спален</p>
+								<p><b>Два. 12,41м² / 11,11м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/bathtub.png'
+								alt=''>
+							<div>
+								<p>Количество санузлов</p>
+								<p><b>Один. 4,75м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/kitchen.png'
+								alt=''>
+							<div>
+								<p>Кухня-гостинная</p>
+								<p><b>Да. 9,20м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/ladder.png'
+								alt=''>
+							<div>
+								<p>Лестница</p>
+								<p><b>Нет</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/balcony.png'
+								alt=''>
+							<div>
+								<p>веранда</p>
+								<p><b>Есть</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/boiler.png'
+								alt=''>
+							<div>
+								<p>бойлерная</p>
+								<p><b>Есть. 3,15м² </b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-radio-option='Кирпич'>
+			<div class='variations-block' data-radio-name='specifications'>
+				<div data-radio-option='Технические' class='active'>
+					<div class='project-specifications-section__features'>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/blueprint.png'
+								alt=''>
+							<div>
+								<p>Общая площадь дома</p>
+								<p><b>86м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/house-plan-scale.png'
+								alt=''>
+							<div>
+								<p>Материал стен</p>
+								<p><b>Газосиликатный блок</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/mixed.png'
+								alt=''>
+							<div>
+								<p>Тип фундамента</p>
+								<p><b>Железобетонные сваи</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/home.png'
+								alt=''>
+							<div>
+								<p>Площадь застройки</p>
+								<p><b>58м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/roofing.png'
+								alt=''>
+							<div>
+								<p>Материал кровли</p>
+								<p><b>Металлочерепица</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/wall.png'
+								alt=''>
+							<div>
+								<p>Материал перегородок</p>
+								<p><b>Кирпич</b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-radio-option='Планировочные'>
+					<div class='project-specifications-section__features'>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/height.png'
+								alt=''>
+							<div>
+								<p>Высота потолков</p>
+								<p><b>2,5м²</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/area.png'
+								alt=''>
+							<div>
+								<p>Количество этажей</p>
+								<p><b>Один, 67,9 м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/bed.png'
+								alt=''>
+							<div>
+								<p>Количество спален</p>
+								<p><b>Два. 12,41м² / 11,11м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/bathtub.png'
+								alt=''>
+							<div>
+								<p>Количество санузлов</p>
+								<p><b>Один. 4,75м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/kitchen.png'
+								alt=''>
+							<div>
+								<p>Кухня-гостинная</p>
+								<p><b>Да. 9,20м² </b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/ladder.png'
+								alt=''>
+							<div>
+								<p>Лестница</p>
+								<p><b>Нет</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/balcony.png'
+								alt=''>
+							<div>
+								<p>веранда</p>
+								<p><b>Есть</b></p>
+							</div>
+						</div>
+						<div class='project-specifications-section__features__block'>
+							<img
+								src='images/icons/boiler.png'
+								alt=''>
+							<div>
+								<p>бойлерная</p>
+								<p><b>Есть. 3,15м² </b></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!--
+.project-specifications-section__
+-->
+	</div>
+	<div class='project-heading-section__aside'>
+		<section class="project-aside-section project-aside-section_mobile-fixed">
+	<div class="variations-block" data-radio-name="variant">
+		<div data-radio-option="Газосиликатный блок" class="active">
+			<div class="project-aside-section__header">
+				<span class="project-aside-section__price">От 7 000 000 <span class="ruble">c</span></span>
+				<span class="project-aside-section__per-square"
+					>56 500 <span class="ruble">a</span> за м²</span
+				>
+			</div>
+		</div>
+		<div data-radio-option="Керамзитобетонный блок">
+			<div class="project-aside-section__header">
+				<span class="project-aside-section__price">От 5 000 000 <span class="ruble">c</span></span>
+				<span class="project-aside-section__per-square"
+					>50 500 <span class="ruble">a</span> за м²</span
+				>
+			</div>
+		</div>
+		<div data-radio-option="Керамический блок">
+			<div class="project-aside-section__header">
+				<span class="project-aside-section__price">От 6 000 000 <span class="ruble">c</span></span>
+				<span class="project-aside-section__per-square"
+					>66 500 <span class="ruble">a</span> за м²</span
+				>
+			</div>
+		</div>
+		<div data-radio-option="Кирпич">
+			<div class="project-aside-section__header">
+				<span class="project-aside-section__price">От 5 500 000 <span class="ruble">c</span></span>
+				<span class="project-aside-section__per-square"
+					>55 500 <span class="ruble">a</span> за м²</span
+				>
+			</div>
+		</div>
+	</div>
+	<div class="project-aside-section__mortgage">
+		<div class="project-aside-section__mortgage__container">
+			<div>
+				В ипотеку <br />
+				от
+				<span class="variations-block" data-radio-name="variant">
+					<span data-radio-option="Газосиликатный блок" class='active'>70 000</span>
+					<span data-radio-option="Керамзитобетонный блок">50 000</span>
+					<span data-radio-option="Керамический блок">60 000</span>
+					<span data-radio-option="Кирпич">40 000</span>
+				</span>
+				<span class="ruble">a</span>/м²
+			</div>
+			<div class="project-aside-section__mortgage__logos">
+				<img src="images/logos/vtb.svg" alt="" />
+				<img src="images/logos/sberbank-circle.svg" alt="" />
+				<img src="images/logos/sovcombank.svg" alt="" />
+			</div>
+		</div>
+		<button
+			class="btn btn_secondary project-aside-section__mortgage__btn"
+			data-scroll=".calculator-section"
+		>
+			Рассчитать ипотеку
+		</button>
+	</div>
+	<div class="project-aside-section__chat">
+		<form
+			class="project-aside-section__chat__input"
+			data-phone="79999999999"
+		>
+			<input
+				type="text"
+				name="message"
+				placeholder="Спросите у продавца"
+			/>
+			<button type="submit" disabled>
+				<svg
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M3 20V4L22 12L3 20ZM5 17L16.85 12L5 7V10.5L11 12L5 13.5V17ZM5 17V12V7V10.5V13.5V17Z"
+						fill="currentColor"
+					/>
+				</svg>
+			</button>
+		</form>
+		<div class='project-aside-section__chat__suggestions'>
+			<button>
+				Какие сроки строительства?
+			</button>
+			<button>
+				Проконсультируете по строительству?
+			</button>
+		</div>
+	</div>
+	<div class="project-aside-section__btns-line">
+		<button class="btn" data-popup='consultation'>
+			Получить консультацию
+		</button>
+		<a
+			class="btn project-aside-section__whatsapp-btn"
+			href="https://wa.me/79999999999"
+		>
+			<svg
+				viewBox="0 0 48 48"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<g clip-path="url(#clip0_102_7395)">
+					<path
+						d="M24 47.7775C37.2548 47.7775 48 37.165 48 24.0738C48 10.9826 37.2548 0.370117 24 0.370117C10.7452 0.370117 0 10.9826 0 24.0738C0 37.165 10.7452 47.7775 24 47.7775Z"
+						fill="#EBFFEE"
+					/>
+					<path
+						d="M12.5 35L14.478 29.324C13.4401 27.6563 12.8936 25.7509 12.8964 23.8101C12.8964 17.84 17.9564 13 24.1986 13C30.44 13 35.5 17.84 35.5 23.8101C35.5 29.7801 30.44 34.6209 24.1986 34.6209C22.2995 34.6209 20.5109 34.1706 18.94 33.3793L12.5 35Z"
+						fill="#14AE5C"
+					/>
+					<path
+						d="M31.377 27.1056C30.8657 26.2071 28.9778 25.1801 28.9778 25.1801C28.5508 24.9539 28.0358 24.9288 27.7922 25.3323C27.7922 25.3323 27.1787 26.0151 27.023 26.1128C26.3103 26.561 25.6501 26.5436 24.984 25.925L23.436 24.4875L21.8879 23.0501C21.2218 22.4315 21.2037 21.8185 21.6857 21.1574C21.7909 21.0122 22.527 20.4432 22.527 20.4432C22.9608 20.2163 22.933 19.7381 22.6901 19.3423C22.6901 19.3423 21.5849 17.5899 20.6173 17.1145C20.4169 17.0159 20.1878 16.9796 19.9636 17.0109C19.7393 17.0422 19.5318 17.1394 19.3715 17.2883L18.6873 17.9236C16.519 19.9371 17.5866 22.2102 19.7557 24.2243L21.7375 26.0646L23.7202 27.9056C25.8892 29.9198 28.3372 30.9111 30.5063 28.897L31.1898 28.2617C31.3499 28.1129 31.4545 27.9203 31.4882 27.7122C31.5219 27.5042 31.4829 27.2915 31.377 27.1056Z"
+						fill="#EBFFEE"
+					/>
+				</g>
+				<defs>
+					<clipPath id="clip0_102_7395">
+						<rect width="48" height="48" fill="white" />
+					</clipPath>
+				</defs>
+			</svg>
+		</a>
+	</div>
+	<button
+		class="btn btn_secondary project-aside-section__full-size-btn"
+		data-popup="callback"
+	>
+		Заказать обратный звонок
+	</button>
+</section>
+
+<!--
+.project-aside-section__
+-->
+
+	</div>
+</section>
+<section class="configuration-section">
+	<div class='configuration-section__radio-container'>
+		<div
+			class="pseudo-radio pseudo-radio_light-bg"
+			data-radio="variant"
+		>
+			<button data-option="Газосиликатный блок" class="active">
+				<span>Газосиликатный блок</span>
+			</button>
+			<button data-option="Керамзитобетонный блок">
+				<span>Керамзитобетонный блок</span>
+			</button>
+			<button data-option="Керамический блок">
+				<span>Керамический блок</span>
+			</button>
+			<button data-option="Кирпич">
+				<span>Кирпич</span>
+			</button>
+		</div>
+	</div>
+	<div class="variations-block" data-radio-name="variant">
+		<div data-radio-option="Газосиликатный блок" class="active">
+			<div class="configuration-section__container">
+				<div class="configuration-section__block">
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Газосиликатный блок-База"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Тёплый дом для круглогодичного использования. Бюджетный вариант комплектации "Жилой дом".
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p><b>-</b><br /></p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_1"
+									checked
+								/>
+								<label for="pricing-radio_1">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_2"
+								/>
+								<label for="pricing-radio_2">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="configuration-section__block">
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Газосиликатный блок-Под черновую"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Тёплый дом для круглогодичного использования.
+							Бюджетный вариант комплектации "Жилой дом".
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p><b>-</b><br /></p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_3"
+								/>
+								<label for="pricing-radio_3">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_4"
+								/>
+								<label for="pricing-radio_4">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+				<div
+					class="configuration-section__block configuration-section__block_recommended"
+				>
+					<div class="configuration-section__block__comment">
+						“Заходи и живи”
+					</div>
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Газосиликатный блок-Под чистовую"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Дополненная комплектация «Жилой дом» и&nbsp;100% готовность всех инженерных систем: необходимое освещение и&nbsp;достаточное количество розеток, скважина для&nbsp;автономного водоснабжения, септик, отопление, кухонный гарнитур, сантехника. Все подключено и работает.
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Акция «Кухня в подарок»</b><br />
+									Покупая дом в комплектации «Кирпич-Под
+									чистовую», вы получаете идеально
+									спроектированную кухню. Высококачественные
+									материалы и эксклюзивный дизайн станут
+									вашими без дополнительных вложений.
+								</p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_5"
+								/>
+								<label for="pricing-radio_5">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_6"
+								/>
+								<label for="pricing-radio_6">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-radio-option="Керамзитобетонный блок">
+			<div class="configuration-section__container">
+				<div class="configuration-section__block">
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Керамзитобетонный блок-База"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Тёплый дом для круглогодичного использования.
+							Бюджетный вариант комплектации "Жилой дом".
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p><b>-</b><br /></p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_7"
+								/>
+								<label for="pricing-radio_7">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_8"
+								/>
+								<label for="pricing-radio_8">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="configuration-section__block">
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Керамзитобетонный блок-Под черновую"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Тёплый дом для круглогодичного использования.
+							Бюджетный вариант комплектации "Жилой дом".
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p><b>-</b><br /></p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_9"
+								/>
+								<label for="pricing-radio_9">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_10"
+								/>
+								<label for="pricing-radio_10">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+				<div
+					class="configuration-section__block configuration-section__block_recommended"
+				>
+					<div class="configuration-section__block__comment">
+						“Заходи и живи”
+					</div>
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Керамзитобетонный блок-Под чистовую"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Дополненная комплектация «Жилой дом» и 100%
+							готовность всех инженерных систем: необходимое
+							освещение и достаточное количество розеток, скважина
+							для автономного водоснабжения, септик, отопление,
+							кухонный гарнитур, сантехника. Все подключено и
+							работает.
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Акция «Кухня в подарок»</b><br />
+									Покупая дом в комплектации «Кирпич-Под
+									чистовую», вы получаете идеально
+									спроектированную кухню. Высококачественные
+									материалы и эксклюзивный дизайн станут
+									вашими без дополнительных вложений.
+								</p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_11"
+								/>
+								<label for="pricing-radio_11">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_12"
+								/>
+								<label for="pricing-radio_12">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-radio-option="Керамический блок">
+			<div class="configuration-section__container">
+				<div class="configuration-section__block">
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Керамический блок-База"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Тёплый дом для круглогодичного использования.
+							Бюджетный вариант комплектации "Жилой дом".
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p><b>-</b><br /></p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_13"
+								/>
+								<label for="pricing-radio_13">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_14"
+								/>
+								<label for="pricing-radio_14">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="configuration-section__block">
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Керамический блок-Под черновую"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Тёплый дом для круглогодичного использования.
+							Бюджетный вариант комплектации "Жилой дом".
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p><b>-</b><br /></p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_15"
+								/>
+								<label for="pricing-radio_15">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_16"
+								/>
+								<label for="pricing-radio_16">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+				<div
+					class="configuration-section__block configuration-section__block_recommended"
+				>
+					<div class="configuration-section__block__comment">
+						“Заходи и живи”
+					</div>
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Керамический блок-Под чистовую"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Дополненная комплектация «Жилой дом» и 100%
+							готовность всех инженерных систем: необходимое
+							освещение и достаточное количество розеток, скважина
+							для автономного водоснабжения, септик, отопление,
+							кухонный гарнитур, сантехника. Все подключено и
+							работает.
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Акция «Кухня в подарок»</b><br />
+									Покупая дом в комплектации «Кирпич-Под
+									чистовую», вы получаете идеально
+									спроектированную кухню. Высококачественные
+									материалы и эксклюзивный дизайн станут
+									вашими без дополнительных вложений.
+								</p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_17"
+								/>
+								<label for="pricing-radio_17">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_18"
+								/>
+								<label for="pricing-radio_18">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div data-radio-option="Кирпич">
+			<div class="configuration-section__container">
+				<div class="configuration-section__block">
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Кирпич-База"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Тёплый дом для круглогодичного использования.
+							Бюджетный вариант комплектации "Жилой дом".
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p><b>-</b><br /></p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_19"
+								/>
+								<label for="pricing-radio_19">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_29"
+								/>
+								<label for="pricing-radio_29">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="configuration-section__block">
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Кирпич-Под черновую"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Тёплый дом для круглогодичного использования.
+							Бюджетный вариант комплектации "Жилой дом".
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p><b>-</b><br /></p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_21"
+								/>
+								<label for="pricing-radio_21">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_22"
+								/>
+								<label for="pricing-radio_22">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+				<div
+					class="configuration-section__block configuration-section__block_recommended"
+				>
+					<div class="configuration-section__block__comment">
+						“Заходи и живи”
+					</div>
+					<div class="configuration-section__block__part">
+						<p class="configuration-section__block__type">
+							Комплектация
+						</p>
+						<p
+							class="configuration-section__block__caption"
+						>
+							"Кирпич-Под чистовую"
+						</p>
+						<p
+							class="configuration-section__block__description"
+						>
+							Дополненная комплектация «Жилой дом» и 100%
+							готовность всех инженерных систем: необходимое
+							освещение и достаточное количество розеток, скважина
+							для автономного водоснабжения, септик, отопление,
+							кухонный гарнитур, сантехника. Все подключено и
+							работает.
+						</p>
+					</div>
+					<div class="configuration-section__block__part">
+						<div
+							data-accordion-name="description"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Краткое описание
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Фундамент:</b><br />
+									Армированный ростверк по сваям. Высота
+									ростверка - 500мм. Ширина ростверка - 490мм.
+									Шаг свай - 2500мм. Диаметр свай - 300мм.
+									Глубина свай - 2000мм.
+								</p>
+
+								<p>
+									<b>Наружные стены:</b><br />
+									Кирпич керамический полнотелый толщиной
+									250мм с утеплением минераловатными плитами
+									толщиной 100мм, железобетонные перемычки.
+								</p>
+
+								<p>
+									<b>Внутренние несущие стены:</b><br />
+									Блок керамзитобетонный толщиной 380мм.
+								</p>
+
+								<p>
+									<b>Вентиляционные каналы:</b><br />
+									Кирпич керамический полнотелый.
+								</p>
+
+								<p>
+									<b>Наружная облицовка:</b><br />
+									кирпич керамический красный 1.4НФ (Ажемак).
+								</p>
+
+								<p>
+									<b>Перекрытия цоколя и 1-го этажа:</b><br />
+									Железобетонные плиты.
+								</p>
+
+								<p>
+									<b>Перекрытие (чердачное):</b><br />
+									Деревянные балки с устройством "черного
+									потолка".
+								</p>
+
+								<p>
+									<b>Кровля:</b><br />
+									деревянная стропильная система. Покрытие
+									кровли - металлочерепица "Монтеррей" с
+									устройством ветро-влогозащитной мембраны.
+								</p>
+
+								<p>
+									<b>Облицовка карнизов:</b><br />
+									Профнастил СН10.
+								</p>
+
+								<p>
+									<b>Окна:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Входные двери:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Лестница:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Инженерные сети</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка стен:</b><br />
+									-
+								</p>
+
+								<p>
+									<b>Внутренняя отделка полов:</b><br />
+									-
+								</p>
+							</div>
+						</div>
+						<div
+							data-accordion-name="pricing_1"
+							class="configuration-section__accordion"
+						>
+							<div
+								class="configuration-section__accordion__header"
+							>
+								Подарки
+							</div>
+							<div
+								class="configuration-section__accordion__body"
+							>
+								<p>
+									<b>Акция «Кухня в подарок»</b><br />
+									Покупая дом в комплектации «Кирпич-Под
+									чистовую», вы получаете идеально
+									спроектированную кухню. Высококачественные
+									материалы и эксклюзивный дизайн станут
+									вашими без дополнительных вложений.
+								</p>
+							</div>
+						</div>
+						<div class="configuration-section__pricing">
+							<p
+								class="configuration-section__pricing__caption"
+							>
+								Стоимость
+							</p>
+							<div
+								class="configuration-section__pricing__option configuration-section__pricing__option_recommended"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_23"
+								/>
+								<label for="pricing-radio_23">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span>Оформление в кредит</span>
+									<b>70 000 <span class="ruble">i</span>/мес</b>
+								</label>
+							</div>
+							<div
+								class="configuration-section__pricing__option"
+							>
+								<input
+									type="radio"
+									name="pricing"
+									id="pricing-radio_24"
+								/>
+								<label for="pricing-radio_24">
+									<span
+										class="configuration-section__pricing__option__icon"
+									></span>
+									<span
+										>Оформление за собственные
+										средства</span
+									>
+									<b>7 000 000 <span class="ruble">i</span></b>
+								</label>
+							</div>
+						</div>
+						<div
+							class="configuration-section__pricing__btns"
+						>
+							<button
+								class="btn configuration-section__pricing__btn"
+								data-popup="callback"
+							>
+								Купить
+							</button>
+							<button
+								class="btn configuration-section__pricing__btn btn_secondary"
+								data-popup='consultation'
+							>
+								Получить консультацию
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="calculator-section">
+	<h2 class="calculator-section__caption">Рассчитайте ипотеку</h2>
+	<div class="calculator-section__container">
+		<div class="calculator-section__block" data-format="# р">
+			<div class="calculator-section__block__header">
+				<p class="calculator-section__block__caption">
+					Стоимость недвижимости
+				</p>
+				<div class="calculator-section__block__value" id='priceValueBlock'>
+					7 000 000 р
+				</div>
+			</div>
+			<div class="calculator-section__slider">
+				<input
+					type="range"
+					min="3000000"
+					max="30000000"
+					id="priceInput"
+					step="1000"
+				/>
+				<div class="calculator-section__slider__minmax">
+					<span>3 000 000 <span class="ruble">i</span></span>
+					<span>30 000 000 <span class="ruble">i</span></span>
+				</div>
+			</div>
+		</div>
+		<div class="calculator-section__block" data-format="#%">
+			<div class="calculator-section__block__header">
+				<p class="calculator-section__block__caption">
+					Процентная ставка
+				</p>
+				<div class="calculator-section__block__value">35%</div>
+			</div>
+			<div class="calculator-section__slider">
+				<input type="range" min="1" max="35" id="rateInput" />
+				<div class="calculator-section__slider__minmax">
+					<span>1%</span>
+					<span>35%</span>
+				</div>
+			</div>
+		</div>
+		<div class="calculator-section__block" data-format="# р">
+			<div class="calculator-section__block__header">
+				<p class="calculator-section__block__caption">
+					Первоначальный взнос
+				</p>
+				<div class="calculator-section__block__value">
+					1 000 000 р
+				</div>
+			</div>
+			<div class="calculator-section__slider">
+				<input
+					type="range"
+					min="1000000"
+					max="1500000"
+					step="1000"
+					id="initialFeeInput"
+				/>
+				<div class="calculator-section__slider__minmax">
+					<span>300 000 <span class="ruble">i</span></span>
+					<span>1 500 000 <span class="ruble">i</span></span>
+				</div>
+			</div>
+		</div>
+		<div class="calculator-section__block" data-format="# лет">
+			<div class="calculator-section__block__header">
+				<p class="calculator-section__block__caption">
+					Срок кредита
+				</p>
+				<div class="calculator-section__block__value">
+					30 лет
+				</div>
+			</div>
+			<div class="calculator-section__slider">
+				<input type="range" min="1" max="30" id="yearsInput" />
+				<div class="calculator-section__slider__minmax">
+					<span>1 год</span>
+					<span>30 лет</span>
+				</div>
+			</div>
+		</div>
+		<div class="calculator-section__info">
+			<img
+				src="images/logos/sberbank.svg"
+				alt=""
+				class="calculator-section__info__logo"
+			/>
+			<p class="calculator-section__info__caption">
+				Наша компания аккредитована в ПАО “Сбербанк”
+			</p>
+			<p>
+				<b>Надежность и доверие</b><br />Аккредитация в ПАО “Сбербанк”
+				подтверждает соблюдение высоких стандартов в строительстве.
+			</p>
+			<p>
+				<b>Выбор среди лучших</b><br />как аккредитованная компания, мы
+				гарантирует вам доступ к безопасным и выгодным условиям
+				приобретения жилья.
+			</p>
+			<p>
+				<b>Привлекательные условия сотрудничества</b><br />вы можете
+				рассчитывать на специальные предложения от банка, ускоренные
+				процедуры одобрения ипотеки.
+			</p>
+		</div>
+		<div class="calculator-section__results">
+			<div class="calculator-section__results__block">
+				<span class='caption'>Сумма кредита</span>
+				<span class='value'><span id="resultPrice">22 932</span> <span class='ruble'>c</span></span>
+			</div>
+			<div class="calculator-section__results__block">
+				<span class='caption'>Ежемесячный платёж</span>
+				<span class='value'><span id="resultMonth">3 824 818</span> <span class='ruble'>c</span></span>
+			</div>
+			<div class="calculator-section__results__block">
+				<span class='caption'>Необходимый доход</span>
+				<span class='value'><span id="resultProfit">222 932</span> <span class='ruble'>c</span></span>
+			</div>
+			<div class="calculator-section__results__block">
+				<span class='caption'>Ставка по кредиту</span>
+				<span class='value' id="resultRate">30%</span>
+			</div>
+		</div>
+		<div class="calculator-section__stats">
+			<div class="calculator-section__stats__block">
+				<img src="images/icons/family.png" alt="" />
+				<span>семейная ипотека</span>
+				<b>от 7% до 8%</b>
+			</div>
+			<div class="calculator-section__stats__block">
+				<img src="images/icons/tax.png" alt="" />
+				<span>ипотека для IT</span>
+				<b>от 6% до 7%</b>
+			</div>
+			<div class="calculator-section__stats__block">
+				<img src="images/icons/investment.png" alt="" />
+				<span>базовая на строительство дома</span>
+				<b>от 21% до 24%</b>
+			</div>
+		</div>
+		<div class="calculator-section__footer">
+			<button
+				class="btn calculator-section__btn"
+				data-popup="callback"
+			>
+				Оставить заявку
+			</button>
+			<span class="calculator-section__policy"
+				>Расчет параметров кредита является предварительным, не является
+				публичной офертой.</span
+			>
+		</div>
+	</div>
+</section>
+
+<!-- .calculator-section -->
+
+<section class="project-aside-section project-aside-section_outside">
+	<div class="variations-block" data-radio-name="variant">
+		<div data-radio-option="Газосиликатный блок" class="active">
+			<div class="project-aside-section__header">
+				<span class="project-aside-section__price">От 7 000 000 <span class="ruble">c</span></span>
+				<span class="project-aside-section__per-square"
+					>56 500 <span class="ruble">a</span> за м²</span
+				>
+			</div>
+		</div>
+		<div data-radio-option="Керамзитобетонный блок">
+			<div class="project-aside-section__header">
+				<span class="project-aside-section__price">От 5 000 000 <span class="ruble">c</span></span>
+				<span class="project-aside-section__per-square"
+					>50 500 <span class="ruble">a</span> за м²</span
+				>
+			</div>
+		</div>
+		<div data-radio-option="Керамический блок">
+			<div class="project-aside-section__header">
+				<span class="project-aside-section__price">От 6 000 000 <span class="ruble">c</span></span>
+				<span class="project-aside-section__per-square"
+					>66 500 <span class="ruble">a</span> за м²</span
+				>
+			</div>
+		</div>
+		<div data-radio-option="Кирпич">
+			<div class="project-aside-section__header">
+				<span class="project-aside-section__price">От 5 500 000 <span class="ruble">c</span></span>
+				<span class="project-aside-section__per-square"
+					>55 500 <span class="ruble">a</span> за м²</span
+				>
+			</div>
+		</div>
+	</div>
+	<div class="project-aside-section__mortgage">
+		<div class="project-aside-section__mortgage__container">
+			<div>
+				В ипотеку <br />
+				от
+				<span class="variations-block" data-radio-name="variant">
+					<span data-radio-option="Газосиликатный блок" class='active'>70 000</span>
+					<span data-radio-option="Керамзитобетонный блок">50 000</span>
+					<span data-radio-option="Керамический блок">60 000</span>
+					<span data-radio-option="Кирпич">40 000</span>
+				</span>
+				<span class="ruble">a</span>/м²
+			</div>
+			<div class="project-aside-section__mortgage__logos">
+				<img src="images/logos/vtb.svg" alt="" />
+				<img src="images/logos/sberbank-circle.svg" alt="" />
+				<img src="images/logos/sovcombank.svg" alt="" />
+			</div>
+		</div>
+		<button
+			class="btn btn_secondary project-aside-section__mortgage__btn"
+			data-scroll=".calculator-section"
+		>
+			Рассчитать ипотеку
+		</button>
+	</div>
+	<div class="project-aside-section__chat">
+		<form
+			class="project-aside-section__chat__input"
+			data-phone="79999999999"
+		>
+			<input
+				type="text"
+				name="message"
+				placeholder="Спросите у продавца"
+			/>
+			<button type="submit" disabled>
+				<svg
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M3 20V4L22 12L3 20ZM5 17L16.85 12L5 7V10.5L11 12L5 13.5V17ZM5 17V12V7V10.5V13.5V17Z"
+						fill="currentColor"
+					/>
+				</svg>
+			</button>
+		</form>
+		<div class='project-aside-section__chat__suggestions'>
+			<button>
+				Какие сроки строительства?
+			</button>
+			<button>
+				Проконсультируете по строительству?
+			</button>
+		</div>
+	</div>
+	<div class="project-aside-section__btns-line">
+		<button class="btn" data-popup='consultation'>
+			Получить консультацию
+		</button>
+		<a
+			class="btn project-aside-section__whatsapp-btn"
+			href="https://wa.me/79999999999"
+		>
+			<svg
+				viewBox="0 0 48 48"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<g clip-path="url(#clip0_102_7395)">
+					<path
+						d="M24 47.7775C37.2548 47.7775 48 37.165 48 24.0738C48 10.9826 37.2548 0.370117 24 0.370117C10.7452 0.370117 0 10.9826 0 24.0738C0 37.165 10.7452 47.7775 24 47.7775Z"
+						fill="#EBFFEE"
+					/>
+					<path
+						d="M12.5 35L14.478 29.324C13.4401 27.6563 12.8936 25.7509 12.8964 23.8101C12.8964 17.84 17.9564 13 24.1986 13C30.44 13 35.5 17.84 35.5 23.8101C35.5 29.7801 30.44 34.6209 24.1986 34.6209C22.2995 34.6209 20.5109 34.1706 18.94 33.3793L12.5 35Z"
+						fill="#14AE5C"
+					/>
+					<path
+						d="M31.377 27.1056C30.8657 26.2071 28.9778 25.1801 28.9778 25.1801C28.5508 24.9539 28.0358 24.9288 27.7922 25.3323C27.7922 25.3323 27.1787 26.0151 27.023 26.1128C26.3103 26.561 25.6501 26.5436 24.984 25.925L23.436 24.4875L21.8879 23.0501C21.2218 22.4315 21.2037 21.8185 21.6857 21.1574C21.7909 21.0122 22.527 20.4432 22.527 20.4432C22.9608 20.2163 22.933 19.7381 22.6901 19.3423C22.6901 19.3423 21.5849 17.5899 20.6173 17.1145C20.4169 17.0159 20.1878 16.9796 19.9636 17.0109C19.7393 17.0422 19.5318 17.1394 19.3715 17.2883L18.6873 17.9236C16.519 19.9371 17.5866 22.2102 19.7557 24.2243L21.7375 26.0646L23.7202 27.9056C25.8892 29.9198 28.3372 30.9111 30.5063 28.897L31.1898 28.2617C31.3499 28.1129 31.4545 27.9203 31.4882 27.7122C31.5219 27.5042 31.4829 27.2915 31.377 27.1056Z"
+						fill="#EBFFEE"
+					/>
+				</g>
+				<defs>
+					<clipPath id="clip0_102_7395">
+						<rect width="48" height="48" fill="white" />
+					</clipPath>
+				</defs>
+			</svg>
+		</a>
+	</div>
+	<button
+		class="btn btn_secondary project-aside-section__full-size-btn"
+		data-popup="callback"
+	>
+		Заказать обратный звонок
+	</button>
+</section>
+
+<!--
+.project-aside-section__
+-->
+
+<div class='popup callback-popup' data-popup-name='callback'>
+	<div class='popup__inner'>
+		<button class='popup__close'>
+			<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M36 12L12 36M12 12L36 36" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+		<p class='popup__caption'>
+			<span class='callback-popup__desktop-caption'>Заказать обратный звонок</span>
+			<span class='callback-popup__mobile-caption'>Оставить заявку</span>
+		</p>
+		<div class='callback-popup__contact'>
+			<p>Выберите удобный вид связи:</p>
+			<div class='callback-popup__radio-line'>
+				<div class='popup__radio'>
+					<input name='contact-method' type='radio' id='callback-contact-method-call' checked>
+					<label for='callback-contact-method-call'>
+						<span class='popup__radio__icon'></span>
+						Звонок
+					</label>
+				</div>
+				<div class='popup__radio'>
+					<input name='contact-method' type='radio' id='callback-contact-method-whatsapp'>
+					<label for='callback-contact-method-whatsapp'>
+						<span class='popup__radio__icon'></span>
+						Написать мне в WhatsApp
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class='input-block'>
+			<label for='callback-name'>Имя</label>
+			<input type='text' id='callback-name'>
+		</div>
+		<div class='input-block'>
+			<label for='callback-phone'>Номер телефона</label>
+			<input type='text' id='callback-phone' placeholder='+7'>
+		</div>
+		<button class='btn popup__btn'>ОТПРАВИТЬ</button>
+		<p class='popup__policy'>Нажимая «Отправить», вы: <br> - подтверждаете, что <a href=''>«C УСЛОВИЯМИ ОФЕРТЫ»</a> ознакомлены;<br> - соглашаетесь на обработку персональных данных в соответствии с
+			<a href=''>Политикой конфиденциальности</a>.</p>
+	</div>
+</div>
+
+<div class='popup callback-popup' data-popup-name='consultation'>
+	<div class='popup__inner'>
+		<button class='popup__close'>
+			<svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M36 12L12 36M12 12L36 36" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+			</svg>
+		</button>
+		<p class='popup__caption'>
+			<span class='callback-popup__desktop-caption'>Получить консультацию</span>
+			<span class='callback-popup__mobile-caption'>Оставить заявку</span>
+		</p>
+		<div class='callback-popup__contact'>
+			<p>Выберите удобный вид связи:</p>
+			<div class='callback-popup__radio-line'>
+				<div class='popup__radio'>
+					<input name='contact-method' type='radio' id='consultation-contact-method-call' checked>
+					<label for='consultation-contact-method-call'>
+						<span class='popup__radio__icon'></span>
+						Звонок
+					</label>
+				</div>
+				<div class='popup__radio'>
+					<input name='contact-method' type='radio' id='consultation-contact-method-whatsapp'>
+					<label for='consultation-contact-method-whatsapp'>
+						<span class='popup__radio__icon'></span>
+						Написать мне в WhatsApp
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class='input-block'>
+			<label for='consultation-name'>Имя</label>
+			<input type='text' id='consultation-name'>
+		</div>
+		<div class='input-block'>
+			<label for='consultation-phone'>Номер телефона</label>
+			<input type='text' id='consultation-phone' placeholder='+7'>
+		</div>
+		<button class='btn popup__btn'>ОТПРАВИТЬ</button>
+		<p class='popup__policy'>Нажимая «Отправить», вы: <br> - подтверждаете, что <a href=''>«C УСЛОВИЯМИ ОФЕРТЫ»</a> ознакомлены;<br> - соглашаетесь на обработку персональных данных в соответствии с
+			<a href=''>Политикой конфиденциальности</a>.</p>
+	</div>
+</div>
+
+	</main>
+	<footer class='footer'>
+	<div class='content footer__container'>
+		<a href="index.html" class="footer__logo">
+			<img src="images/logos/logo_light.svg" alt="" />
+		</a>
+		<nav class='footer__menu'>
+			<a href=''>ГЛАВНАЯ</a>
+			<a href=''>ПРОЕКТЫ</a>
+			<a href=''>О НАС</a>
+			<a href=''>ЭТАПЫ РАБОТЫ</a>
+			<a href=''>НАШИ РАБОТЫ</a>
+			<a
+				href='https://ladus-stroy.ru/contact-us'
+				class='footer__btn footer__map-btn-mobile'>
+				<span>МЫ НА КАРТЕ</span>
+				<svg viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M5 12.6665H19M19 12.6665L12 5.6665M19 12.6665L12 19.6665" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</a>
+		</nav>
+		<div class='footer__text'>
+			<p class='footer__copy'>© 2019 ЛАДУС СТРОЙ ИП Гильманов Ф.А., ИНН 020204618856, ОГРНИП 324028000031981</p>
+			<p class='footer__payment'><span>СПОСОБЫ ОПЛАТЫ</span>Наличные/Трейд ин/По счету/Картой/Перевод/Поэтапно/Мат. капитал</p>
+		</div>
+		<div class='footer__contacts'>
+			<div>
+				<p>Республика Башкортостан, г.Уфа, Кавказская 6/3</p>
+				<p>Телефон: <a href=''>+7-919-144-44-14</a>, <a href=''>+7-917-424-42-47</a>
+				<p>E-mail: <a href=''>ladus-stroy@mail.ru</a></p>
+			</div>
+			<a
+				href='https://ladus-stroy.ru/contact-us'
+				class='footer__btn footer__map-btn'>
+				<span>МЫ НА КАРТЕ</span>
+				<svg viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M5 12.6665H19M19 12.6665L12 5.6665M19 12.6665L12 19.6665" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</a>
+			<div class='footer__social'>
+				<a href=''>
+					<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<g clip-path="url(#clip0_283_17570)">
+							<path d="M24.006 0.666504H23.994C10.761 0.666504 0 11.4305 0 24.6665C0 29.9165 1.692 34.7825 4.569 38.7335L1.578 47.6495L10.803 44.7005C14.598 47.2145 19.125 48.6665 24.006 48.6665C37.239 48.6665 48 37.8995 48 24.6665C48 11.4335 37.239 0.666504 24.006 0.666504Z" fill="#4CAF50" />
+							<path d="M37.9716 34.5571C37.3926 36.1921 35.0946 37.5481 33.2616 37.9441C32.0076 38.2111 30.3696 38.4241 24.8556 36.1381C17.8026 33.2161 13.2606 26.0491 12.9066 25.5841C12.5676 25.1191 10.0566 21.7891 10.0566 18.3451C10.0566 14.9011 11.8056 13.2241 12.5106 12.5041C13.0896 11.9131 14.0466 11.6431 14.9646 11.6431C15.2616 11.6431 15.5286 11.6581 15.7686 11.6701C16.4736 11.7001 16.8276 11.7421 17.2926 12.8551C17.8716 14.2501 19.2816 17.6941 19.4496 18.0481C19.6206 18.4021 19.7916 18.8821 19.5516 19.3471C19.3266 19.8271 19.1286 20.0401 18.7746 20.4481C18.4206 20.8561 18.0846 21.1681 17.7306 21.6061C17.4066 21.9871 17.0406 22.3951 17.4486 23.1001C17.8566 23.7901 19.2666 26.0911 21.3426 27.9391C24.0216 30.3241 26.1936 31.0861 26.9706 31.4101C27.5496 31.6501 28.2396 31.5931 28.6626 31.1431C29.1996 30.5641 29.8626 29.6041 30.5376 28.6591C31.0176 27.9811 31.6236 27.8971 32.2596 28.1371C32.9076 28.3621 36.3366 30.0571 37.0416 30.4081C37.7466 30.7621 38.2116 30.9301 38.3826 31.2271C38.5506 31.5241 38.5506 32.9191 37.9716 34.5571Z" fill="#FAFAFA" />
+						</g>
+						<defs>
+							<clipPath id="clip0_283_17570">
+								<rect width="48" height="48" fill="white" transform="translate(0 0.666504)" />
+							</clipPath>
+						</defs>
+					</svg>
+				</a>
+				<a href=''>
+					<svg width="48" height="49" viewBox="0 0 48 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.9993 47.9992C36.886 47.9992 47.3327 37.5525 47.3327 24.6659C47.3327 11.7792 36.886 1.33252 23.9993 1.33252C11.1127 1.33252 0.666016 11.7792 0.666016 24.6659C0.666016 37.5525 11.1127 47.9992 23.9993 47.9992Z" fill="url(#paint0_linear_283_17573)" />
+						<path d="M35.6451 15.0153C35.8517 13.6719 34.5751 12.6136 33.3817 13.1369L9.6084 23.5753C8.75174 23.9503 8.81507 25.2469 9.70174 25.5303L14.6051 27.0919C15.5417 27.3903 16.5551 27.2353 17.3717 26.6703L28.4251 19.0336C28.7584 18.8036 29.1217 19.2786 28.8367 19.5719L20.8801 27.7753C20.1084 28.5703 20.2617 29.9186 21.1901 30.5019L30.0984 36.0869C31.0984 36.7136 32.3817 36.0853 32.5701 34.8769L35.6451 15.0153Z" fill="white" />
+						<defs>
+							<linearGradient id="paint0_linear_283_17573" x1="23.9993" y1="1.33252" x2="23.9993" y2="47.9992" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#37BBFE" />
+								<stop offset="1" stop-color="#007DBB" />
+							</linearGradient>
+						</defs>
+					</svg>
+				</a>
+			</div>
+		</div>
+		<div class='footer__policy'>
+			Использование сайта означает согласие с <a href=''>Пользовательским соглашением</a> и <a href=''>Политикой обработки персональных данных</a>
+		</div>
+		<div class='footer__scroll-top'>
+			<button class='footer__btn footer__scroll-top' data-scroll='.main'>
+				<span>НАВЕРХ</span>
+				<svg viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M12 19.6665V5.6665M12 5.6665L5 12.6665M12 5.6665L19 12.6665" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+				</svg>
+			</button>
+		</div>
+	</div>
+</footer>
+
+	<script src="libs/Swiper/swiper-bundle.min.js"></script>
+	<script src="js/app.min.js"></script>
+
+</body>
+</html>
