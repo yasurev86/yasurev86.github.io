@@ -1,0 +1,30 @@
+.wrapper{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 127px;
+}
+
+@include mediaMax($bp1440){
+	.wrapper{
+		gap: 80px;
+	}
+}
+
+@include mediaMax($bp1000){
+	.wrapper{
+		gap: 30px;
+	}
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px 80px;
+	}
+}
+
+@include mediaMax($bp360){
+	.wrapper{
+		gap: 30px 12px;
+	}
+}

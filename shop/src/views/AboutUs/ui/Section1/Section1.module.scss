@@ -1,0 +1,173 @@
+.wrapper{
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background-color: $secondary;
+	display: grid;
+	grid-template-columns: 978fr 542fr;
+	min-height: 50vh;
+}
+
+.main{
+	padding: 60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.caption{
+	font-size: 62px;
+	font-weight: $fwBold;
+	font-family: $fSans;
+}
+
+.tags{
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	white-space: nowrap;
+	flex-wrap: wrap;
+	span{
+		padding: 5px 9px;
+		-webkit-border-radius: 100px;
+		-moz-border-radius: 100px;
+		border-radius: 100px;
+		background-color: white;
+		font-weight: $fwMedium;
+	}
+}
+
+.aside{
+	border-left: 1px dotted rgba($text, .5);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	p{
+		font-size: 20px;
+		font-weight: $fwMedium;
+		& + p{
+			margin-top: 25px;
+		}
+	}
+	&_{
+		&inner{
+			padding: 60px 106px 60px 60px;
+		}
+	}
+}
+
+.partners{
+	margin-bottom: 50px;
+	display: flex;
+	align-items: center;
+	gap: 40px;
+	padding: 27px 60px;
+	border-top: 1px dotted rgba($text, .5);
+	border-bottom: 1px dotted rgba($text, .5);
+	img{
+		overflow: hidden;
+	}
+}
+
+@include mediaMax($bp1440){
+	.caption{
+		font-size: 52px;
+	}
+	.main{
+		padding: 40px;
+	}
+	.aside_inner{
+		padding: 40px 106px 40px 40px;
+	}
+	.aside p{
+		font-size: 18px;
+	}
+	.partners{
+		padding: 27px 50px;
+		margin-bottom: 48px;
+	}
+}
+
+@include mediaMax($bp1000){
+	.caption{
+		font-size: 32px;
+	}
+	.tags{
+		font-size: 14px;
+	}
+	.aside p{
+		font-size: 15px;
+	}
+	.aside_inner{
+		padding: 40px 30px 40px 40px;
+	}
+	.partners{
+		margin-bottom: 40px;
+		gap: 23px;
+	}
+}
+
+@include mediaMax($bp768){
+	.wrapper{
+		display: block;
+		min-height: unset;
+	}
+	.tags{
+		margin-top: 30px;
+	}
+	.aside{
+		border-left: unset;
+		border-top: 1px dotted rgba($text, .5);
+		padding: 30px;
+		&_inner{
+			padding: unset;
+		}
+	}
+	.main{
+		padding: 40px 30px;
+	}
+	.partners{
+		padding: unset;
+		border: unset;
+		margin: 40px 0 0;
+		width: 307px;
+		max-width: 100%;
+		gap: 30px;
+	}
+}
+
+@include mediaMax($bp428){
+	.caption{
+		font-size: 24px;
+	}
+	.aside p{
+		font-size: 14px;
+	}
+	.partners{
+		margin-bottom: unset;
+	}
+	.main{
+		padding: 30px 20px;
+	}
+	.aside{
+		padding: 20px;
+	}
+}
+
+
+@include mediaMax($bp360){
+	.caption{
+		font-size: 18px;
+	}
+	.tags{
+		font-size: 12px;
+	}
+	.aside p{
+		font-size: 12px;
+	}
+	.partners{
+		gap: 20px;
+	}
+}

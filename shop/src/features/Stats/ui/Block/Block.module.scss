@@ -1,0 +1,31 @@
+.name{
+	font-size: 38px;
+	font-weight: $fwBlack;
+	color: $accent;
+}
+
+.text{
+	margin-top: 10px;
+	opacity: .5;
+	font-weight: $fwMedium;
+	font-size: 20px;
+}
+
+@include mediaMax($bp1000){
+	.name{
+		font-size: 24px;
+	}
+	.text{
+		font-size: 16px;
+	}
+}
+
+@include mediaMax($bp428){
+	.name{
+		font-size: 18px;
+	}
+	.text{
+		font-size: 12px;
+		margin-top: 5px;
+	}
+}

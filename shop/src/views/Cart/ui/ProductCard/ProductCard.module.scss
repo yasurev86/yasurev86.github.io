@@ -1,0 +1,139 @@
+@each $element in (image, info, quantity, price){
+	.#{$element}{
+		grid-area: $element;
+	}
+}
+
+.wrapper{
+	display: grid;
+	grid-template-columns: auto 1fr auto 100px;
+	grid-template-areas: 'image info quantity price';
+	gap: 23px;
+	align-items: center;
+
+	& + & {
+		margin-top: 35px;
+	}
+}
+
+.image{
+	width: 64px;
+	height: 64px;
+	position: relative;
+	img{
+		height: 100%;
+		object-fit: contain;
+		object-position: center;
+	}
+}
+
+
+.deleteBtn{
+	width: 25px;
+	height: 25px;
+	background-color: white;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	position: absolute;
+	right: -6px;
+	top: -6px;
+	font-size: 18px;
+	color: rgba($text, .4);
+
+	@include hover{
+		color: rgba($text, .6);
+	}
+}
+
+.name{
+	font-size: 16px;
+	font-weight: $fwSemiBold;
+	@include hover{
+		color: $accent;
+	}
+}
+
+.code{
+	opacity: .5;
+	font-size: 14px;
+	font-weight: $fwBold;
+	display: block;
+	margin-top: 12px;
+}
+
+.price{
+	text-align: right;
+}
+
+.oldPrice{
+	font-size: 12px;
+}
+
+.discount{
+	font-size: 12px;
+}
+
+.actualPrice{
+	font-size: 22px;
+}
+
+
+@include mediaMax($bp1440){
+	.wrapper{
+		& + &{
+			margin-top: 30px;
+		}
+	}
+}
+
+@include mediaMax($bp768){
+	.image{
+		width: 45px;
+		height: 45px;
+	}
+	.deleteBtn{
+		width: 17px;
+		height: 17px;
+		font-size: 14px;
+	}
+	.name{
+		font-size: 14px;
+	}
+	.code{
+		font-size: 12px;
+		margin-top: 10px;
+	}
+	.actualPrice{
+		font-size: 18px;
+	}
+	.wrapper{
+		& + &{
+			margin-top: 24px;
+		}
+	}
+}
+
+@include mediaMax($bp428) {
+	.wrapper{
+		grid-template-columns: auto auto 1fr;
+		gap: 12px 23px;
+		grid-template-areas: 'image info info' '_ quantity price';
+	}
+	.code{
+		margin-top: 7px;
+	}
+}
+
+@include mediaMax($bp360) {
+	.wrapper{
+		gap: 10px 15px;
+	}
+	.image {
+		width: 35px;
+		height: 35px;
+	}
+	.actualPrice{
+		font-size: 16px;
+	}
+}

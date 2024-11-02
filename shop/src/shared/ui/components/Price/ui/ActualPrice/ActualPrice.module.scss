@@ -1,0 +1,9 @@
+.wrapper {
+	font-weight: $fwSemiBold;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	span{
+		font-size: .72em;
+	}
+}

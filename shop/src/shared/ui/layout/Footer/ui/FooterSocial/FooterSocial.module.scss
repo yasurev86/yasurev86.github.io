@@ -1,0 +1,23 @@
+.wrapper{
+	display: flex;
+	gap: var(--gap);
+	color: white;
+
+	--size: 37px;
+	--gap: 7px;
+}
+
+.item{
+	width: var(--size);
+	height: var(--size);
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: rgba(white, .1);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	@include hover{
+		background-color: rgba(white, .2);
+	}
+}

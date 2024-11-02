@@ -1,0 +1,140 @@
+$duration: .3s;
+
+.wrapper{
+	overflow: hidden;
+
+	--padding-y: 15px;
+	--padding-x: 24px;
+}
+
+.inner{
+	padding: var(--padding-y) 0;
+	background-color: white;
+	overflow: hidden;
+}
+
+@include mediaMin($bp1440){
+	.scrollContainer{
+		max-height: 100%;
+	}
+	.inner {
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+	}
+	.header{
+		display: none;
+	}
+
+	.applyBtn{
+		display: none !important;
+	}
+}
+
+.scrollInner{
+	padding: 0 var(--padding-x);
+}
+
+.btns{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 0 var(--padding-x);
+
+	@include mediaMin($bp1440){
+		margin-top: 30px;
+	}
+}
+
+@include mediaMax($bp1000){
+	.wrapper{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100svh;
+		z-index: 1000;
+
+		&:not(._is-opened){
+			pointer-events: none;
+
+			.overlay{
+				opacity: 0;
+			}
+
+			.inner{
+				-webkit-transform: translateX(-100%);
+				-moz-transform: translateX(-100%);
+				-ms-transform: translateX(-100%);
+				-o-transform: translateX(-100%);
+				transform: translateX(-100%);
+			}
+		}
+	}
+	.inner{
+		width: 380px;
+		height: 100%;
+		z-index: 2;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+
+		-webkit-transition: transform $duration;
+		-moz-transition: transform $duration;
+		-ms-transition: transform $duration;
+		-o-transition: transform $duration;
+		transition: transform $duration;
+	}
+	.overlay{
+		background-color: rgba(black, .5);
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		-webkit-transition: opacity $duration;
+		-moz-transition: opacity $duration;
+		-ms-transition: opacity $duration;
+		-o-transition: opacity $duration;
+		transition: opacity $duration;
+	}
+	.header{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0 var(--padding-x);
+		flex-shrink: 0;
+	}
+	.scrollContainer{
+		flex: 1;
+		overflow: hidden;
+	}
+	.simplebar{
+		max-height: 100%;
+	}
+	.caption{
+		font-size: 18px;
+		font-family: $fGrotesk;
+		font-weight: $fwBold;
+		span{
+			color: $accent;
+		}
+	}
+	.closeBtn{
+		font-size: 22px;
+		opacity: .5;
+		@include hover{
+			opacity: .75;
+		}
+	}
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		--padding-x: 15px;
+	}
+	.inner{
+		width: 100%;
+	}
+}

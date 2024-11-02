@@ -1,0 +1,55 @@
+.wrapper{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.text{
+	flex: 1;
+	font-size: 15px;
+	font-weight: $fwSemiBold;
+}
+
+.icon{
+	width: 40px;
+	height: 40px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: $secondary;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	svg{
+		width: 18px;
+		height: 18px;
+	}
+}
+
+.checked{
+	color: #118F1D;
+	font-size: 16px;
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		gap: 14px;
+	}
+}
+
+@include mediaMax($bp360){
+	.text{
+		font-size: 12px;
+	}
+	.icon{
+		width: 30px;
+		height: 30px;
+		svg{
+			width: 14px;
+			height: 14px;
+		}
+	}
+	.checked{
+		font-size: 12px;
+	}
+}

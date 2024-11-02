@@ -1,0 +1,149 @@
+.wrapper{
+	display: flex;
+	background-color: $secondary;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	position: relative;
+	height: var(--search-height);
+
+	--search-height: 41px;
+
+	&._is-active{
+		border-bottom-left-radius: 0;
+
+		.btn{
+			border-bottom-left-radius: 0;
+			border-top-left-radius: 0;
+		}
+	}
+}
+
+.inner{
+	flex: 1;
+	position: relative;
+}
+
+.input{
+	width: 100%;
+	height: 100%;
+	background-color: unset;
+	padding: 0 48px;
+	font-size: 14px;
+	font-weight: $fwMedium;
+	outline: none;
+
+	&::placeholder{
+		color: rgba($text, .4);
+	}
+}
+
+.icon{
+	font-size: 18px;
+	position: absolute;
+	left: 20px;
+	top: calc(50% - .5em);
+	color: rgba($text, .5);
+}
+
+.closeBtn{
+	position: absolute;
+	right: 20px;
+	top: calc(50% - .5em);
+	color: rgba($text, .5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 10px;
+
+	&::before{
+		content: "";
+		position: absolute;
+		left: -50%;
+		top: -50%;
+		bottom: -50%;
+		right: -50%;
+	}
+}
+
+.btn{
+	padding: 0 16px;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	background-color: $accent;
+	font-size: 14px;
+	font-weight: $fwBold;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&:focus{
+		outline: 1px solid $accent;
+		outline-offset: 2px;
+	}
+
+	@include hover{
+		background-color: $accent-hover;
+	}
+}
+
+.results{
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 100%;
+	padding: 20px 0;
+	-webkit-border-radius: 0 0 15px 15px;
+	-moz-border-radius: 0 0 15px 15px;
+	border-radius: 0 0 15px 15px;
+	background-color: white;
+	box-shadow: 0 14px 37.4px 0 rgba(black, .2);
+	overflow: hidden;
+	z-index: 2;
+}
+
+.scrollContainer{
+	max-height: 50vh;
+}
+
+@include mediaMax($bp1000){
+	.wrapper{
+		&._is-active{
+			position: absolute;
+			left: var(--content-padding);
+			right: var(--content-padding);
+			z-index: 2;
+		}
+	}
+}
+
+@include mediaMax($bp768){
+	.btn{
+		padding: unset;
+		width: var(--search-height);
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		font-size: 20px;
+	}
+}
+
+@include mediaMax($bp428){
+	.input{
+		padding: 0 14px;
+	}
+	.icon{
+		display: none;
+	}
+}
+
+@include mediaMax($bp360){
+	.wrapper{
+		--search-height: 38px;
+	}
+	.results{
+		padding: 12px 0;
+	}
+}

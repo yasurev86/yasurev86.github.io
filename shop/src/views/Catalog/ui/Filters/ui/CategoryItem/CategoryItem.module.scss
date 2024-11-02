@@ -1,0 +1,32 @@
+.wrapper{
+	display: grid;
+	grid-template-columns: 14px 1fr 16px;
+	gap: 10px;
+	cursor: pointer;
+	position: relative;
+	
+	& + &{
+		margin-top: 12px;
+	}
+
+	@include hover{
+		.name, .arrow{
+			color: $accent;
+		}
+	}
+}
+
+.icon{
+	font-size: 14px;
+	color: $accent;
+}
+
+.name{
+	font-weight: $fwMedium;
+	font-size: 14px;
+}
+
+.arrow{
+	font-size: 16px;
+	color: rgba($text, .4);
+}

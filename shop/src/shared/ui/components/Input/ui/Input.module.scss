@@ -1,0 +1,251 @@
+$focus-outline: #7B8ED2;
+$hover-outline: rgba($text, .1);
+
+
+.wrapper {
+	font-size: var(--font-size);
+	position: relative;
+	z-index: 1;
+
+	--padding-x: 20px;
+	--padding-top: 16px;
+	--padding-bottom: 16px;
+	--label-height: 14px;
+	--font-size: 16px;
+
+	@include mediaMax($bp768){
+		--font-size: 14px;
+	}
+
+	&--{
+		&disabled{
+			pointer-events: none;
+			opacity: .5;
+		}
+	}
+}
+
+.inner{
+	position: relative;
+}
+
+.element {
+	$self: &;
+
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: $secondary;
+
+	width: 100%;
+
+	padding-left: var(--padding-x);
+	padding-right: var(--padding-x);
+
+	line-height: 1;
+
+	outline-offset: -1px;
+
+	&:hover, &.state--hover {
+		outline: 1px solid $hover-outline;
+	}
+	&:focus, &.state--focus {
+		outline: 1px solid $focus-outline;
+	}
+
+	&.element--{
+		&validationError{
+			outline: 1px solid $warning;
+			background-color: rgba($warning, .03);
+		}
+		&error{
+			outline: 1px solid $accent;
+			background-color: rgba($accent, .03);
+		}
+	}
+
+	&:focus + .label, &:valid + .label{
+		font-size: calc(var(--font-size) * .75);
+		top: calc(var(--padding-top) + .5em);
+	}
+}
+
+.type-- {
+	&input {
+		.element {
+			height: 52px;
+
+			@include mediaMax($bp768){
+				height: 48px;
+			}
+
+			@include mediaMax($bp360){
+				height: 46px;
+			}
+		}
+
+		--padding--top: 8px;
+		--padding--bottom: 8px;
+	}
+
+	&textarea {
+		.element {
+			min-width: 100%;
+			max-width: 100%;
+			min-height: calc(var(--padding-top) + var(--padding-bottom) + 1.18em);
+			padding-bottom: var(--padding-bottom);
+			padding-top: var(--padding-top);
+		}
+
+		.label{
+			top: calc(var(--padding-top) + 1em);
+		}
+	}
+}
+
+.feature-- {
+	&search{
+		.element{
+			padding-left: calc(var(--padding-x) + 10px + (18em/16));
+		}
+	}
+	&icon{
+		.element{
+			padding-right: calc(var(--padding-x) * 2 + 1.5em);
+		}
+	}
+	&label {
+		--padding-top: 9px;
+		.element {
+			padding-top: var(--padding-top);
+		}
+
+		&.type--textarea {
+			.element {
+				padding-top: calc(var(--padding-top) + var(--label-height));
+				min-height: calc(var(--padding-top) + var(--padding-bottom) + var(--label-height) * var(--rows) + 1.18em);
+			}
+		}
+	}
+	&showHide{
+		.element{
+			padding-right: calc(var(--padding-x) * 2 + 1.5em);
+		}
+		&.feature--icon{
+			.element{
+				padding-right: calc(var(--padding-x) * 2 + 3em + .5em);
+			}
+			.icon{
+				right: calc(var(--padding-x) + 1.5em);
+			}
+		}
+	}
+}
+
+.footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-top: 8px;
+}
+
+.action {
+	font-size: 12px;
+	color: $accent;
+	font-weight: $fwMedium;
+	cursor: pointer;
+
+	@include hover {
+		color: $accent-hover;
+	}
+}
+
+.maxLength {
+	font-size: 12px;
+	opacity: .4;
+	font-weight: $fwMedium;
+}
+
+.label {
+	position: absolute;
+	left: var(--padding-x);
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	font-size: var(--font-size);
+	line-height: var(--label-height);
+	opacity: .5;
+	pointer-events: none;
+	z-index: 1;
+
+	-webkit-transition: .1s all;
+	-moz-transition: .1s all;
+	-ms-transition: .1s all;
+	-o-transition: .1s all;
+	transition: .1s all;
+}
+
+.icon, .showHideBtn{
+	font-size: 1.5em;
+	position: absolute;
+	right: var(--padding-x);
+	top: calc(50% - .5em);
+	opacity: .5;
+}
+
+.showHideBtn{
+	display: flex;
+	align-items: center;
+}
+
+.icon, .searchIcon{
+	pointer-events: none;
+}
+
+.searchIcon{
+	font-size: (18em/16);
+	position: absolute;
+	left: var(--padding-x);
+	top: calc(50% - .5em);
+}
+.status{
+	font-size: 12px;
+	font-weight: $fwMedium;
+	color: rgba($text, .7);
+	line-height: 16px;
+	&Icon{
+		font-size: 16px;
+		margin-right: 8px;
+		vertical-align: text-top;
+	}
+	&--{
+		&error{
+			.statusIcon{
+				color: $accent;
+			}
+		}
+		&validationError{
+			.statusIcon{
+				color: $warning;
+			}
+		}
+	}
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		--padding-x: 14px;
+		--padding-top: 7px;
+
+		font-size: 14px;
+	}
+}
+
+@include mediaMax($bp360){
+	.wrapper{
+		--padding-x: 12px;
+	}
+}

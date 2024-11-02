@@ -1,0 +1,92 @@
+.wrapper{
+	padding: 24px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	background-color: $secondary;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.buy{
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	overflow: hidden;
+}
+
+.totalPriceCaption{
+	display: block;
+	margin-bottom: 10px;
+	opacity: .5;
+	font-size: 12px;
+	font-weight: $fwSemiBold;
+}
+
+.totalPrice{
+	font-size: 22px;
+	font-weight: $fwBlack;
+}
+
+
+// TODO: Костыль из-за дублирующихся стилей
+.wrapper{
+	.cancelBtn{
+		--bg-color: white;
+		--hover-bg-color: #{darken(white, 2)};
+	}
+
+	.cartBtn{
+		--font-size: 14px;
+	}
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		padding: 16px 20px;
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+	}
+
+	// TODO: Костыль из-за дублирующихся стилей
+	.wrapper .cancelBtn{
+		display: none !important;
+	}
+
+	.totalPriceCaption{
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+	.totalPrice{
+		font-size: 20px;
+	}
+	.buy{
+		width: 100%;
+		justify-content: space-between;
+	}
+}
+
+@include mediaMax($bp360){
+	.wrapper{
+		padding: 14px 16px;
+		-webkit-border-radius: 6px;
+		-moz-border-radius: 6px;
+		border-radius: 6px;
+	}
+	.buy{
+		align-items: flex-start;
+		flex-direction: column;
+		gap: 10px;
+	}
+	.cartBtn{
+		width: 100%;
+	}
+	.totalPriceCaption{
+		margin-bottom: 2px;
+	}
+	.totalPrice{
+		font-size: 16px;
+	}
+}

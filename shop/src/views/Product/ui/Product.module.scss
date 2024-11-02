@@ -1,0 +1,6 @@
+.breadcrumbs{
+	@include mediaMax($bp1440){
+		// TODO: fix
+		display: none !important;
+	}
+}

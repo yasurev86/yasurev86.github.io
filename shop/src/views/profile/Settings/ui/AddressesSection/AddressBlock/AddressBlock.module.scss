@@ -1,0 +1,45 @@
+@include mediaMin($bp768){
+	.wrapper{
+		display: flex;
+		align-items: center;
+		gap: 24px;
+	}
+	.header{
+		display: none;
+	}
+}
+
+.text{
+	font-size: 16px;
+	font-weight: $fwMedium;
+	width: 330px;
+	max-width: 100%;
+}
+
+.deleteBtn{
+	flex-shrink: 0;
+	font-size: 24px;
+	@include hover{
+		color: $accent;
+	}
+}
+
+.inputs{
+	flex: 1;
+}
+
+@include mediaMax($bp428){
+	.header{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 14px;
+	}
+	.caption{
+		font-size: 15px;
+		font-weight: $fwMedium;
+	}
+	.deleteBtn{
+		display: none;
+	}
+}

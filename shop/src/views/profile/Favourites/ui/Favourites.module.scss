@@ -1,0 +1,50 @@
+.grid{
+	margin-top: 30px;
+}
+
+.sort{
+	width: 254px;
+}
+
+.header{
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	z-index: 2;
+	position: relative;
+	flex-wrap: wrap;
+}
+
+.actions{
+	display: flex;
+	align-items: center;
+}
+
+.selection{
+	display: flex;
+	gap: 25px;
+	white-space: nowrap;
+	&_{
+		&count{
+			font-size: 14px;
+			font-weight: $fwBold;
+			opacity: .5;
+		}
+	}
+}
+
+@include mediaMax($bp428){
+	.header{
+		gap: 16px 0;
+		justify-content: space-between;
+	}
+	.sort{
+		width: 100%;
+	}
+}
+
+@include mediaMax($bp360){
+	.selection{
+		width: 100%;
+	}
+}

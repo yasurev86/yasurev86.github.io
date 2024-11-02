@@ -1,0 +1,22 @@
+.wrapper{
+	position: relative;
+	background-color: $text;
+	padding: 12px 20px;
+	-webkit-border-radius: 11px;
+	-moz-border-radius: 11px;
+	border-radius: 11px;
+	span{
+		color: rgba(white, .7);
+		margin-bottom: 8px;
+		display: block;
+	}
+	p{
+		font-size: 16px;
+		font-weight: $fwBold;
+		color: white;
+	}
+}
+
+.icon{
+	margin-right: 10px;
+}

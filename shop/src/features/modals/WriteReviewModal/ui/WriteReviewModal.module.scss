@@ -1,0 +1,21 @@
+.modalInner{
+	width: 591px;
+}
+
+.btns{
+	align-items: center;
+	margin-top: 30px;
+	gap: 20px;
+	@include mediaMax($bp360){
+		gap: 14px;
+	}
+}
+
+.rating{
+	margin-bottom: 16px;
+	&Label{
+		margin-bottom: 10px;
+		font-size: 14px;
+		font-weight: $fwSemiBold;
+	}
+}

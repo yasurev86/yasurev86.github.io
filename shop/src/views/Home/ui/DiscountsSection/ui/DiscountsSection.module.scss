@@ -1,0 +1,32 @@
+.wrapper{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	gap: var(--gap);
+
+	--gap: 13px;
+}
+
+.blocks{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--gap);
+}
+
+@include mediaMax($bp1000){
+	.wrapper{
+		grid-template-columns: unset;
+		--gap: 12px;
+	}
+}
+
+@include mediaMax($bp428){
+	.blocks{
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.wrapper{
+		--gap: 4px;
+		margin-left: calc(-1 * var(--content-padding));
+		margin-right: calc(-1 * var(--content-padding));
+	}
+}

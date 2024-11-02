@@ -1,0 +1,21 @@
+.caption{
+	font-size: 25px;
+	margin: 20px 0 30px;
+}
+
+.table{
+	margin-top: 20px;
+}
+
+@include mediaMax($bp428){
+	.caption{
+		font-size: 18px;
+		margin: 10px 0 20px;
+	}
+}
+
+@include mediaMax($bp360){
+	.caption{
+		font-size: 16px;
+	}
+}

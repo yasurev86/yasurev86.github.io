@@ -1,0 +1,86 @@
+.wrapper{
+	display: grid;
+	grid-template-columns: 2fr repeat(3, 1fr);
+	font-weight: $fwSemiBold;
+	font-size: 14px;
+	& + &{
+		margin-top: 20px;
+	}
+}
+
+
+.info{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	position: relative;
+	font-size: inherit;
+	img{
+		width: 60px;
+		height: 60px;
+	}
+	@include hover{
+		.name{
+			color: $accent;
+		}
+	}
+}
+
+.price, .quantity{
+	span{
+		display: block;
+		margin-bottom: 6px;
+		opacity: .5;
+	}
+}
+
+@include mediaMin($bp768){
+	.price, .quantity{
+		span{
+			display: none;
+		}
+	}
+}
+
+.code{
+	opacity: .5;
+	margin-top: 12px;
+}
+
+@include mediaMax($bp768){
+	.wrapper{
+		font-size: 12px;
+	}
+	.code{
+		margin-top: 8px;
+	}
+	.info {
+		gap: 12px;
+		img {
+			width: 38px;
+			height: 38px;
+		}
+	}
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: 'info info info' 'price quantity reviewBtn';
+		align-items: center;
+		gap: 16px;
+	}
+	.price{
+		grid-area: price
+	}
+
+	.quantity{
+		grid-area: quantity;
+	}
+	.info{
+		grid-area: info;
+	}
+	.reviewBtn{
+		grid-area: reviewBtn;
+	}
+}

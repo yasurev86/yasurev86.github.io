@@ -1,0 +1,69 @@
+.wrapper{
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	padding: 12px 30px;
+	cursor: pointer;
+
+	@include mediaMin($bp1440){
+		-webkit-transition: background-color .2s;
+		-moz-transition: background-color .2s;
+		-ms-transition: background-color .2s;
+		-o-transition: background-color .2s;
+		transition: background-color .2s;
+
+		@include hover{
+			background-color: rgba($accent, .1);
+			.name{
+				color: $accent;
+			}
+			.arrow{
+				color: $accent;
+			}
+		}
+
+		&._is-selected{
+			background-color: rgba($accent, .1);
+			.name{
+				color: $accent;
+			}
+			.arrow{
+				color: $accent;
+			}
+		}
+	}
+}
+
+._skeleton{
+	pointer-events: none;
+}
+
+.icon{
+	font-size: 20px;
+	color: $accent;
+}
+
+.name{
+	font-size: 14px;
+	font-weight: $fwSemiBold;
+	flex: 1;
+}
+
+.arrow{
+	flex-shrink: 0;
+	font-size: 16px;
+	color: rgba($text, .4);
+}
+
+@include mediaMax($bp1000){
+	.wrapper{
+		padding: 9px 0;
+
+		@include hover{
+			color: $accent;
+			.arrow{
+				color: $accent;
+			}
+		}
+	}
+}

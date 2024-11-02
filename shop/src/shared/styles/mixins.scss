@@ -1,0 +1,31 @@
+@use "sass:map";
+
+@mixin hover {
+	&:active {
+		@content
+	}
+
+	@media (hover: hover) {
+		&:hover {
+			@content
+		}
+	}
+}
+
+@mixin mediaMax($breakpoint) {
+	@media screen and (max-width: #{(map.get($breakpoint, "max"))}px) {
+		@content;
+	}
+}
+
+@mixin mediaMin($breakpoint) {
+	@media screen and (min-width: #{(map.get($breakpoint, "min"))}px) {
+		@content;
+	}
+}
+
+@mixin mediaRange($min, $max) {
+	@media screen and (max-width: #{(map.get($max, "min") - 1)}px) and (min-width: #{(map.get($min, "min"))}px) {
+		@content;
+	}
+}

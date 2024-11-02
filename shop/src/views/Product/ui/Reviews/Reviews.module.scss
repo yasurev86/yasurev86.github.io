@@ -1,0 +1,22 @@
+.review{
+	& + &{
+		margin-top: 70px;
+	}
+}
+
+.sort{
+	margin-bottom: 45px;
+	width: 210px;
+}
+
+@include mediaMax($bp1440){
+	.review + .review{
+		margin-top: 50px;
+	}
+}
+
+@include mediaMax($bp1000){
+	.review + .review{
+		margin-top: 40px;
+	}
+}

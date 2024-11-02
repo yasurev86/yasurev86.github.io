@@ -1,0 +1,60 @@
+.wrapper{
+	display: grid;
+	grid-template-columns: auto 1fr 100px;
+	gap: 23px;
+
+	& + &{
+		margin-top: 22px;
+	}
+}
+
+.image{
+	width: 58px;
+	height: 58px;
+	object-fit: contain;
+	object-position: center;
+}
+
+.name{
+	margin-bottom: 12px;
+	font-size: 14px;
+	font-weight: $fwSemiBold;
+}
+
+.code{
+	font-size: 12px;
+	font-weight: $fwBold;
+	opacity: .5;
+}
+
+.price{
+	font-size: 18px;
+	flex-shrink: 0;
+	text-align: right;
+	opacity: .8;
+	align-self: center;
+}
+
+@include mediaMax($bp1440){
+	.wrapper{
+		& + &{
+			margin-top: 15px;
+		}
+	}
+}
+
+@include mediaMax($bp360){
+	.wrapper{
+		gap: 12px;
+	}
+	.price{
+		font-size: 16px;
+	}
+	.name{
+		font-size: 12px;
+	}
+	.image{
+		width: 35px;
+		height: 35px;
+	}
+}

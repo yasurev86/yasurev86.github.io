@@ -1,0 +1,51 @@
+.wrapper{
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	position: relative;
+}
+
+@include mediaMin($bp768){
+	.wrapper{
+		&::before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border: 1px solid white;
+			border-top: none;
+			border-left: none;
+			z-index: 2;
+			box-sizing: border-box;
+			pointer-events: none;
+		}
+	}
+	.item{
+		border: 1px solid rgba($text, .1);
+		border-top: none;
+		border-left: none;
+		&:last-child{
+			border-right: none;
+		}
+	}
+}
+
+@include mediaMax($bp1440){
+	.wrapper{
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@include mediaMax($bp768){
+	.wrapper{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		grid-template-columns: repeat(2, 1fr);
+		gap: 4px;
+	}
+}

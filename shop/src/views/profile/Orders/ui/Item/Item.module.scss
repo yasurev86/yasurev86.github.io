@@ -1,0 +1,173 @@
+.wrapper{
+	@include mediaMin($bp768){
+		&:not(:last-child){
+			border-bottom: 1px solid rgba($text, .1);
+		}
+	}
+	&._is-opened{
+		background-color: white;
+		.header{
+			box-shadow: 0 7px 39.3px 0 #0000000D;
+		}
+	}
+	@include hover{
+		background-color: white;
+		.header{
+			box-shadow: 0 7px 39.3px 0 #0000000D;
+		}
+	}
+}
+
+.header{
+	font-weight: $fwBold;
+	position: relative;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.body{
+	padding: 30px 20px;
+	background-color: white;
+}
+
+.sectionCaption{
+	font-size: 18px;
+	font-weight: $fwBold;
+	margin-bottom: 23px;
+	&:not(:first-child){
+		margin-top: 32px;
+	}
+}
+
+.footer{
+	display: grid;
+	grid-template-columns: 1fr 300px;
+	--spacing: 30px;
+	padding-top: var(--spacing);
+	margin-top: var(--spacing);
+	position: relative;
+	&::before{
+		content: '';
+		position: absolute;
+		top: 0;
+		border-top: 1px solid rgba($text, .1);
+		left: -20%;
+		right: -20%;
+	}
+}
+
+.total{
+	margin-top: 20px;
+	span{
+		&:first-child{
+			font-size: 18px;
+		}
+		&:last-child{
+			font-size: 24px;
+		}
+	}
+}
+
+@include mediaMax($bp1000){
+	.body{
+		padding: 30px 20px;
+	}
+}
+
+@include mediaMax($bp768){
+	.total{
+		span{
+			&:first-child{
+				font-size: 18px;
+			}
+			&:last-child{
+				font-size: 20px;
+			}
+		}
+	}
+	.sectionCaption{
+		font-size: 16px;
+		margin-bottom: 20px;
+		&:not(:first-child){
+			margin-top: 30px;
+		}
+	}
+}
+
+@include mediaMax($bp428){
+	.body{
+		padding: unset;
+		margin-top: 24px;
+	}
+	.footer{
+		gap: 16px;
+		grid-template-columns: unset;
+	}
+	.wrapper{
+		border: 1px solid rgba($text, .1);
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		overflow: hidden;
+		background-color: white;
+		padding: 16px;
+		& + &{
+			margin-top: 10px;
+		}
+	}
+	.header{
+		display: none;
+	}
+	.mobileHeader{
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 20px;
+	}
+	.mobileStatus{
+		font-size: 12px;
+	}
+	.caption{
+		font-size: 14px;
+		font-weight: $fwSemiBold;
+		margin-bottom: 6px;
+	}
+	.headerSum{
+		font-size: 12px;
+		font-weight: $fwBold;
+		margin-top: 14px;
+		span{
+			opacity: .5;
+			margin-bottom: 6px;
+			display: block;
+			font-weight: $fwMedium;
+		}
+	}
+	.toggleBtn{
+		font-size: 23px;
+		color: $accent;
+	}
+	.footer{
+		--spacing: 24px;
+	}
+}
+
+@include mediaMax($bp360){
+	.body{
+		margin-top: 20px;
+	}
+	.total{
+		margin-top: 14px;
+		span{
+			&:first-child{
+				font-size: 14px;
+			}
+			&:last-child{
+				font-size: 16px;
+			}
+		}
+	}
+	.footer{
+		--spacing: 20px;
+	}
+}

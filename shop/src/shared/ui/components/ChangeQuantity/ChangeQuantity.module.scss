@@ -1,0 +1,54 @@
+.wrapper{
+	display: flex;
+	align-items: center;
+	height: 37px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid rgba($text, .2);
+	padding: 0 10px;
+	gap: 5px;
+	width: max-content;
+	input{
+		width: 35px;
+		text-align: center;
+		outline: none;
+		text-overflow: ellipsis;
+		font-size: 14px;
+		font-weight: $fwSemiBold;
+	}
+	button{
+		font-size: 12px;
+		opacity: .5;
+		height: 100%;
+		padding: 0 5px;
+
+		@include hover{
+			opacity: .75;
+		}
+	}
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		height: 31px;
+		padding: 0 5px;
+		gap: 0;
+		button{
+			font-size: 10px;
+			padding: 0 10px;
+		}
+	}
+}
+
+@include mediaMax($bp360){
+	.wrapper{
+		height: 27px;
+		button{
+			font-size: 8px;
+		}
+		input{
+			font-size: 12px;
+		}
+	}
+}

@@ -1,0 +1,41 @@
+.avatarBlock{
+	margin-bottom: 32px;
+}
+
+.divider{
+	margin: 30px 0;
+	border: none;
+	border-top: 1px solid rgba($text, .1);
+	margin-left: -100px;
+	width: calc(100% + 200px);
+}
+
+
+@include mediaMax($bp768){
+	.row{
+		gap: 10px;
+	}
+}
+
+@include mediaMax($bp428){
+	.row{
+		gap: 8px;
+		margin: 8px 0;
+	}
+	.avatarBlock{
+		margin-bottom: 20px;
+	}
+	.wrapper{
+		padding: 24px;
+		-webkit-border-radius: 22px;
+		-moz-border-radius: 22px;
+		border-radius: 22px;
+		background-color: white;
+	}
+}
+
+@include mediaMax($bp360){
+	.wrapper{
+		padding: 24px 20px;
+	}
+}

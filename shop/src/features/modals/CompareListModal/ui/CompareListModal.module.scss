@@ -1,0 +1,94 @@
+.modalInner{
+	width: 547px;
+}
+
+.empty{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 79px 0;
+	&Icon{
+		font-size: 46px;
+		color: $accent;
+	}
+	p{
+		margin: 30px 0 14px;
+		font-size: 18px;
+		font-weight: $fwBold;
+	}
+	span{
+		font-size: 16px;
+		opacity: .8;
+	}
+}
+
+.item{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	position: relative;
+	@include hover{
+		.name{
+			color: $accent;
+		}
+	}
+	&:not(:last-child){
+		padding-bottom: 16px;
+		margin-bottom: 16px;
+		border-bottom: 1px solid rgba($text, .1)
+	}
+}
+
+.name{
+	font-size: 16px;
+	font-weight: $fwSemiBold;
+	white-space: nowrap;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	span:first-child{
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	.count{
+		flex-shrink: 0;
+		color: $accent;
+	}
+}
+
+.deleteBtn{
+	font-size: 24px;
+	opacity: .5;
+	flex-shrink: 0;
+	z-index: 2;
+	@include hover{
+		opacity: .75;
+	}
+}
+
+@include mediaMax($bp428){
+	.item{
+		.name{
+			font-size: 15px;
+		}
+	}
+	.deleteBtn{
+		font-size: 20px;
+	}
+	.empty{
+		padding: 60px 0 40px;
+		p{
+			margin: 24px 0 14px;
+			font-size: 16px;
+		}
+		span{
+			font-size: 14px;
+		}
+		&Icon{
+			font-size: 38px;
+		}
+	}
+}

@@ -1,0 +1,18 @@
+.wrapper{
+	display: flex;
+	align-items: center;
+	color: rgba(white, .5);
+}
+
+.text{
+	font-size: 15px;
+	margin-right: 22px;
+	font-weight: $fwMedium;
+}
+
+@include mediaMax($bp428){
+	.text{
+		font-size: 12px;
+		margin-right: 11px;
+	}
+}

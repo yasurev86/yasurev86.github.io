@@ -1,0 +1,56 @@
+.wrapper{
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background-color: white;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	position: relative;
+	@include hover{
+		.caption{
+			color: $accent;
+		}
+	}
+}
+
+.image{
+	width: 104px;
+	height: 104px;
+}
+
+.caption{
+	font-size: 14px;
+	font-weight: $fwSemiBold;
+	text-align: center;
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		gap: 15px;
+	}
+	.image{
+		width: 80px;
+		height: 80px;
+	}
+	.caption{
+		font-size: 12px;
+	}
+}
+
+
+@include mediaMax($bp360){
+	.image{
+		width: 64px;
+		height: 64px;
+	}
+	.wrapper{
+		gap: 12px;
+	}
+}
+

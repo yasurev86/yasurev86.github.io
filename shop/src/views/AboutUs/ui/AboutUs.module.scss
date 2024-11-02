@@ -1,0 +1,85 @@
+.advantages{
+	margin-top: 40px;
+}
+
+.caption{
+	font-size: 28px;
+	font-weight: $fwBlack;
+	font-family: $fSans;
+	span{
+		opacity: .5;
+		font-weight: $fwMedium;
+	}
+}
+
+.captionContainer{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 50px;
+	p{
+		font-size: 16px;
+		opacity: .8;
+		width: 467px;
+		max-width: 40%;
+	}
+	.caption{
+		width: 720px;
+		max-width: 60%;
+	}
+}
+
+.image{
+	margin-top: 40px;
+	height: 50vh;
+	object-fit: cover;
+	object-position: center;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+}
+
+@include mediaMax($bp1000){
+	.caption{
+		font-size: 25px;
+	}
+	.captionContainer{
+		flex-direction: column;
+		gap: 25px;
+		align-items: flex-start;
+		p, .caption{
+			width: unset;
+			max-width: unset;
+		}
+	}
+}
+
+@include mediaMax($bp768){
+	.image{
+		margin-top: 30px;
+	}
+}
+
+@include mediaMax($bp428){
+	.caption{
+		font-size: 18px;
+	}
+	.captionContainer{
+		gap: 19px;
+		p{
+			font-size: 14px;
+		}
+	}
+}
+
+@include mediaMax($bp360){
+	.caption{
+		font-size: 16px;
+	}
+	.captionContainer{
+		gap: 10px;
+		p{
+			font-size: 12px;
+		}
+	}
+}

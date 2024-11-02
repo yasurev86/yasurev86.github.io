@@ -1,0 +1,96 @@
+@include mediaMin($bp768){
+	.wrapper{
+		background-color: $secondary;
+		height: var(--pre-header-height);
+		white-space: nowrap;
+		font-size: 15px;
+	}
+
+	.inner{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	.info, .nav, .schedule{
+		display: flex;
+		list-style-type: none;
+		flex: 1;
+	}
+
+	.info{
+		gap: 16px;
+		color: $gray;
+		li{
+			@include hover{
+				color: $text;
+			}
+		}
+	}
+
+	.nav{
+		gap: 29px;
+		justify-content: center;
+		font-weight: $fwSemiBold;
+		height: 100%;
+		li{
+			a{
+				display: flex;
+				align-items: center;
+				height: 100%;
+				@include hover{
+					position: relative;
+					&::after{
+						content: '';
+						position: absolute;
+						left: 0;
+						bottom: 0;
+						width: 100%;
+						border-top: 2px solid $text;
+					}
+				}
+			}
+		}
+	}
+
+	.schedule{
+		color: $gray;
+		text-align: right;
+		display: block;
+		line-height: 20px;
+		font-weight: $fwMedium;
+		svg{
+			width: 20px;
+			height: 20px;
+			margin-right: 8px;
+			vertical-align: middle;
+		}
+	}
+
+	@include mediaMax($bp1440){
+		.wrapper{
+			font-size: 14px;
+		}
+	}
+
+	@include mediaMax($bp1000){
+		.wrapper{
+			font-size: 12px;
+		}
+		.info, .schedule{
+			flex: unset;
+		}
+		.nav{
+			justify-content: unset;
+			padding-left: 19px;
+			gap: 16px;
+		}
+	}
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		display: none;
+	}
+}

@@ -1,0 +1,107 @@
+.container{
+	margin-top: 30px;
+
+	@include mediaMax($bp360){
+		margin-top: 24px;
+	}
+}
+
+@include mediaMin($bp1440){
+	.container{
+		display: grid;
+		grid-template-columns: 1fr 4fr;
+		gap: 20px;
+		align-items: flex-start;
+	}
+}
+
+.products{
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+
+	@include mediaMax($bp1000){
+		gap: 10px 4px;
+	}
+	@include mediaMax($bp768){
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@include mediaMax($bp428){
+		grid-template-columns: repeat(2, 1fr);
+		gap: 4px;
+		margin-left: calc(-1 * var(--content-padding));
+		margin-right: calc(-1 * var(--content-padding));
+	}
+}
+
+.caption{
+	font-size: 25px;
+	font-weight: $fwBold;
+
+	@include mediaMax($bp428){
+		font-size: 18px;
+	}
+	@include mediaMax($bp360){
+		font-size: 16px;
+	}
+}
+
+.header{
+	margin-top: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	z-index: 2;
+}
+
+.actions{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	@include mediaMax($bp428){
+		gap: 5px;
+	}
+}
+
+@include mediaMin($bp1440){
+	// TODO: fix
+	.filtersBtn{
+		display: none !important;
+	}
+}
+
+.sort{
+	@include mediaMin($bp1000){
+		width: 200px;
+	}
+}
+
+.pagination{
+	margin-top: 40px;
+}
+
+.section{
+	margin: 54px 0;
+}
+
+@include mediaMax($bp768){
+	.header{
+		flex-direction: column;
+		gap: 26px;
+		align-items: flex-start;
+	}
+	.actions{
+		width: 100%;
+	}
+	.sort, .filtersBtn{
+		flex: 1;
+	}
+}
+
+@include mediaMax($bp360){
+	.header{
+		gap: 16px;
+	}
+}

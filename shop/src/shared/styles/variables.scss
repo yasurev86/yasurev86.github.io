@@ -1,0 +1,30 @@
+$accent: #1abc9c;
+$accent-hover: #16a085;
+
+$secondary: #EDEEF3;
+$secondary-hover: #E3E6F2;
+
+$foreground: #F7F8FC;
+
+$gray: #63676E;
+
+$text: #2c3e50;
+
+$warning: #F1790A;
+
+$fGrotesk: var(--CraftworkGrotesk), Arial, sans-serif;
+$fSans: var(--CraftworkSans), Arial, sans-serif;
+
+$fwRegular: normal;
+$fwMedium: 500;
+$fwSemiBold: 600;
+$fwBold: bold;
+$fwHeavy: 800;
+$fwBlack: 900;
+
+$bpDesktop: (min: 1601, max: 99999);
+$bp1440: (min: 1401, max: 1600);
+$bp1000: (min: 1000, max: 1400);
+$bp768: (min: 768, max: 999);
+$bp428: (min: 428, max: 767);
+$bp360: (min: 0, max: 427);

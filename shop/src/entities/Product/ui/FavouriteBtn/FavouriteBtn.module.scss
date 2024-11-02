@@ -1,0 +1,13 @@
+.wrapper{
+	@include hover{
+		color: #FFA900;
+	}
+
+	&._is-active{
+		color: #FFA900;
+		opacity: 1;
+		&:hover{
+			color: darken(#FFA900, 5%);
+		}
+	}
+}

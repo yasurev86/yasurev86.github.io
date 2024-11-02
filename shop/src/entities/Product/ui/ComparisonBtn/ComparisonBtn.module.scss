@@ -1,0 +1,29 @@
+.wrapper{
+	position: relative;
+	@include hover{
+		color: $accent;
+	}
+}
+
+.checkbox{
+	width: 15px;
+	height: 15px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #0E7041;
+	font-size: 5px;
+	color: white;
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: 2px solid white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
+}
+
+.active .checkbox{
+	visibility: visible;
+}

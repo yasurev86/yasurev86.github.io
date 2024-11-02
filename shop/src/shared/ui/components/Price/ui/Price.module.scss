@@ -1,0 +1,49 @@
+.discountBlock{
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-bottom: 2px;
+}
+
+.actualPlusDiscountBlock{
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.variant--{
+	&all-in-row{
+		display: flex;
+		align-items: center;
+		gap: 12px;
+	}
+	&group_actualPrice-and-discount{
+		.discount{
+			margin-bottom: 8px;
+		}
+	}
+}
+
+.align--{
+	&right, &center{
+		display: flex;
+	}
+	&right{
+		&.variant--{
+			&all-in-row{
+				justify-content: flex-end;
+			}
+			&group_oldPrice-and-discount, &group_actualPrice-and-discount{
+				flex-direction: column;
+				align-items: flex-end;
+			}
+		}
+	}
+	&center{
+		&.variant--{
+			&all-in-row{
+				justify-content: center;
+			}
+		}
+	}
+}

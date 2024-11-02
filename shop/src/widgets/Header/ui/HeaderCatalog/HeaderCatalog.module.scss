@@ -1,0 +1,42 @@
+@include mediaMin($bp1440){
+	.catalog{
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 100%;
+		z-index: 2;
+		box-shadow: 0 4px 31px 0 rgba(0, 0, 0, 0.14);
+
+		--border-radius: 10px !important;
+
+		-webkit-border-radius: var(--border-radius);
+		-moz-border-radius: var(--border-radius);
+		border-radius: var(--border-radius);
+
+		-webkit-transition: opacity .2s ease-in-out;
+		-moz-transition: opacity .2s ease-in-out;
+		-ms-transition: opacity .2s ease-in-out;
+		-o-transition: opacity .2s ease-in-out;
+		transition: opacity .2s ease-in-out;
+
+		&:not(&--opened){
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+}
+
+@include mediaMax($bp1000){
+	.catalogBtn{
+		min-height: 41px;
+		-webkit-border-radius: 13px !important;
+		-moz-border-radius: 13px !important;
+		border-radius: 13px !important;
+	}
+}
+
+@include mediaMax($bp428){
+	.catalogBtn{
+		display: none !important;
+	}
+}

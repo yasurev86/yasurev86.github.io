@@ -1,0 +1,76 @@
+.chooseTab{
+	height: 41px;
+	border-bottom: 1px solid rgba($text, .1);
+	margin-bottom: 30px;
+	display: flex;
+	gap: 20px;
+	button{
+		height: 100%;
+		font-size: 16px;
+		font-weight: $fwSemiBold;
+		display: flex;
+		align-items: flex-start;
+		opacity: .5;
+		@include hover{
+			opacity: 1;
+		}
+		&.activeTabBtn{
+			position: relative;
+			opacity: 1;
+			&::after{
+				content: '';
+				position: absolute;
+				left: 0;
+				width: 100%;
+				bottom: -1px;
+				border-top: 2px solid $accent;
+			}
+		}
+
+		@include mediaMax($bp768){
+			font-size: 14px;
+		}
+		@include mediaMax($bp428){
+			font-size: 13px;
+		}
+		@include mediaMax($bp360){
+			font-size: 12px;
+		}
+	}
+
+	@include mediaMax($bp768){
+		height: 35px;
+		margin-bottom: 20px;
+	}
+	@include mediaMax($bp428){
+		height: 31px;
+	}
+	@include mediaMax($bp360){
+		height: 29px;
+	}
+}
+
+.row{
+	gap: 15px;
+	& + &{
+		margin-top: 20px;
+	}
+	@include mediaMax($bp768){
+		gap: 10px;
+		& + &{
+			margin-top: 10px;
+		}
+	}
+}
+
+.confirmBtn{
+	margin-top: 30px;
+
+	@include mediaMax($bp1000){
+		margin-top: 25px;
+	}
+
+	@include mediaMax($bp428){
+		margin-top: 20px;
+	}
+}

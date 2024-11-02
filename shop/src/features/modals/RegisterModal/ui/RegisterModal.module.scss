@@ -1,0 +1,17 @@
+.modalInner{
+	width: 591px;
+}
+
+.policy{
+	margin: 20px 0 24px;
+	font-size: 14px;
+	color: rgba($text, .7);
+	line-height: (20/14);
+	a{
+		color: $text;
+		text-decoration: underline;
+		@include hover{
+			text-decoration: none;
+		}
+	}
+}

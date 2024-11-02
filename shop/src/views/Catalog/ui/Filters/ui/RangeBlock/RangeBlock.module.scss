@@ -1,0 +1,43 @@
+.container{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	input{
+		padding: 7px 12px;
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px;
+		border: 1px solid rgba($text, .3);
+		flex: 1;
+
+		// hide arrows
+		-moz-appearance: textfield;
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+
+		&::placeholder{
+			color: rgba($text, .4);
+		}
+		@include hover{
+			border-color: rgba($text, .5);
+		}
+		&:focus{
+			outline: 1px solid $accent;
+			outline-offset: -1px;
+		}
+	}
+}
+
+.divider{
+	font-size: 14px;
+	font-weight: $fwMedium;
+	opacity: .4;
+}
+
+.rangeInput{
+	margin-top: 12px;
+}

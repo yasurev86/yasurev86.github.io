@@ -1,0 +1,187 @@
+.wrapper{
+	position: relative;
+	min-height: var(--avatar-size);
+
+	--avatar-size: 65px;
+	--avatar-gap: 18px;
+}
+
+.variant--withAvatar{
+	&:not(.reply){
+		@include mediaMin($bp768){
+			padding-left: calc(var(--avatar-size) + var(--avatar-gap));
+		}
+		@include mediaMax($bp428){
+			> .header{
+				padding-left: calc(var(--avatar-size) + var(--avatar-gap));
+			}
+		}
+	}
+	&.reply{
+		padding-left: calc(var(--avatar-size) + var(--avatar-gap));
+	}
+}
+
+.avatar{
+	position: absolute;
+	width: var(--avatar-size);
+	height: var(--avatar-size);
+	left: 0;
+	top: 0;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.meta{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.name{
+	font-size: 16px;
+	font-weight: $fwBlack;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.date{
+	font-size: 12px;
+	font-weight: $fwSemiBold;
+	opacity: .5;
+	white-space: nowrap;
+}
+
+.rating{
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	margin-top: 10px;
+}
+
+.star{
+	color: $accent;
+	font-size: 16px;
+	&--disabled{
+		color: rgba($text, .2);
+	}
+}
+
+.text{
+	font-size: 16px;
+	line-height: (24/16);
+	opacity: .7;
+}
+
+.replyBtn{
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	font-weight: $fwMedium;
+	margin-top: 20px;
+	@include hover{
+		color: $accent;
+	}
+}
+
+.reply{
+	padding-top: 7px;
+	margin-top: 45px;
+}
+
+.replyToName{
+	font-size: 12px;
+	font-weight: $fwSemiBold;
+	white-space: nowrap;
+	span{
+		margin-right: 7px;
+		opacity: .5;
+		font-size: 18px;
+	}
+}
+
+.header{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 20px;
+	&Main{
+		overflow: hidden;
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.loadingRepliesContainer{
+	opacity: .5;
+}
+
+.loadingRepliesText{
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+.loadMore{
+	margin-top: 20px;
+}
+
+
+@include mediaMax($bp1440){
+	.reply{
+		margin-top: 30px;
+	}
+}
+
+@include mediaMax($bp1000){
+	.wrapper{
+		--avatar-size: 50px;
+	}
+	.text{
+		font-size: 15px;
+	}
+}
+
+@include mediaMax($bp428){
+	.name{
+		font-size: 14px;
+	}
+	.wrapper{
+		--avatar-size: 40px;
+		--avatar-gap: 14px;
+	}
+	.header{
+		margin-bottom: 14px;
+	}
+	.reply{
+		> .header{
+			margin-bottom: 8px;
+		}
+	}
+	.star{
+		font-size: 14px;
+	}
+	.reply, .loadMore{
+		margin-top: 20px;
+		margin-left: 20px;
+	}
+	.replyToName{
+		font-size: 10px;
+		span{
+			font-size: 14px;
+			margin-right: 5px;
+		}
+	}
+	.meta{
+		gap: 5px;
+	}
+}
+
+@include mediaMax($bp360){
+	.header{
+		flex-direction: column;
+		gap: 10px;
+	}
+}

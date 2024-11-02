@@ -1,0 +1,170 @@
+.selector{
+	background-color: white;
+	margin-bottom: 20px;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	overflow: hidden;
+	&Container{
+		padding: 0 30px;
+		height: 63px;
+		display: flex;
+		gap: 20px;
+		white-space: nowrap;
+	}
+	button{
+		height: 100%;
+		opacity: .5;
+		font-size: 16px;
+		font-weight: $fwSemiBold;
+		flex-shrink: 0;
+		&:hover{
+			opacity: 1;
+		}
+		span{
+			padding: .25em .5em;
+			background-color: $accent;
+			color: white;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			margin-left: .5em;
+			font-size: .75em;
+		}
+		&.active{
+			opacity: 1;
+			position: relative;
+			&::after{
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				border-top: 2px solid $accent;
+			}
+		}
+	}
+}
+
+.container{
+	padding: 50px;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	background-color: white;
+}
+
+.description{
+	font-size: 16px;
+
+	p{
+		line-height: (24/16);
+		color: rgba($text, .8);
+	}
+
+	h4{
+		font-size: 18px;
+	}
+
+	h1, h2, h3, h4{
+		font-weight: $fwBold;
+		&:not(:first-child){
+			margin-top: 40px;
+		}
+	}
+
+	ul{
+		padding-left: 18px;
+		font-size: 16px;
+		color: rgba($text, .8);
+
+		li{
+			& + li{
+				margin-top: 6px;
+			}
+		}
+
+		&:not(:first-child){
+			margin-top: 16px;
+		}
+	}
+}
+
+@include mediaMax($bp1000){
+	.container{
+		padding: 34px 30px;
+	}
+	.description{
+		font-size: 15px;
+		h1, h2, h3, h4{
+			&:not(:first-child){
+				margin-top: 35px;
+			}
+		}
+		ul{
+			font-size: 15px;
+		}
+	}
+}
+
+@include mediaMax($bp768){
+	.selector button{
+		font-size: 14px;
+	}
+	.selectorContainer{
+		height: 47px;
+	}
+}
+
+@include mediaMax($bp428){
+	.container{
+		padding: 30px 20px;
+	}
+	.manualBtn{
+		width: 100%;
+	}
+	.selector{
+		div[class*="scrollbar-track-x"]{
+			top: 0 !important;
+			bottom: auto !important;
+		}
+	}
+	.selectorContainer{
+		padding: 0 20px;
+		width: max-content;
+	}
+	.description{
+		font-size: 14px;
+		h4{
+			font-size: 16px;
+		}
+		h1, h2, h3, h4{
+			&:not(:first-child){
+				margin-top: 30px;
+			}
+		}
+		ul{
+			font-size: 14px;
+			&:not(:first-child){
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+@include mediaMax($bp360){
+	.container{
+		padding: 24px 20px;
+	}
+	.description{
+		font-size: 12px;
+		h1, h2, h3, h4{
+			&:not(:first-child){
+				margin-top: 20px;
+			}
+		}
+		ul{
+			font-size: 12px;
+		}
+	}
+}

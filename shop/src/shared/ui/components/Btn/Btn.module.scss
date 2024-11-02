@@ -1,0 +1,222 @@
+.wrapper{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	font-weight: $fwMedium;
+	position: relative;
+	white-space: nowrap;
+
+	color: var(--color);
+	background-color: var(--bg-color);
+	font-size: var(--font-size);
+
+	&.fullWidth{
+		width: 100%;
+	}
+
+	&:disabled{
+		pointer-events: none;
+		span{
+			opacity: .5;
+		}
+	}
+
+	@each $state in ("hover", "active", "focus", "disabled") {
+		&:#{$state}, &.state--#{$state}{
+			color: var(--#{$state}-color);
+			background-color: var(--#{$state}-bg-color);
+		}
+	}
+
+	&:focus, &.state-focus{
+		outline: var(--focus-outline);
+	}
+
+	----font-size: unset;
+
+	--bg-color: unset;
+	--color: unset;
+
+	--hover-bg-color: var(--bg-color);
+	--hover-color: var(--color);
+
+	--active-bg-color: var(--hover-bg-color);
+	--active-color: var(--hover-color);
+
+	--focus-bg-color: var(--hover-bg-color);
+	--focus-color: var(--hover-color);
+
+	--disabled-bg-color: var(--hover-bg-color);
+	--disabled-color: var(--hover-color);
+
+	--focus-outline: unset;
+}
+
+.icon{
+	font-size: var(--icon-font-size);
+	height: 1em;
+	width: 1em;
+}
+
+.use--{
+
+	&primary{
+		outline-offset: 3px;
+
+		--bg-color: #{$accent};
+		--color: white;
+
+		--hover-bg-color: #{$accent-hover};
+
+		--disabled-bg-color: #{$secondary};
+		--disabled-color: #{$text};
+
+		--focus-outline: 1px solid #{$accent};
+	}
+
+	&secondary{
+		--bg-color: #{$secondary};
+
+		--hover-bg-color: #{$secondary-hover};
+
+		--focus-outline: 1px solid #7B8ED2;
+	}
+
+	&tertiary, &tertiary-accent{
+		padding-bottom: 8px;
+		border-bottom: 1px dashed currentColor;
+
+		&:disabled{
+			border-bottom-color: transparent;
+		}
+
+		&:active, &.state--active{
+			border-bottom-color: transparent;
+		}
+	}
+
+	&tertiary{
+		--hover-color: #{$accent};
+		--disabled-color: #{$text};
+	}
+
+	&tertiary-accent{
+		--color: #{$accent};
+
+		--hover-color: #{$text};
+		--disabled-color: #{$text};
+	}
+}
+
+.size--{
+	&small{
+		gap: 5px;
+
+		--font-size: 14px;
+		--icon-font-size: 12px;
+		&.use--tertiary{
+			--font-size: 12px;
+		}
+		&.use--primary, &.use--secondary{
+			&.icon--only{
+				width: 28px;
+				height: 28px;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+
+				--icon-font-size: 16px;
+			}
+			&:not(.icon--only){
+				padding: 0 12.5px;
+				height: 32px;
+				-webkit-border-radius: 8px;
+				-moz-border-radius: 8px;
+				border-radius: 8px;
+			}
+		}
+	}
+	&medium{
+		gap: 5px;
+
+		--font-size: 14px;
+		--icon-font-size: 16px;
+		&.use--primary, &.use--secondary {
+			&.icon--only{
+				width: 32px;
+				height: 32px;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+
+				--icon-font-size: 18px;
+
+				@include mediaMax($bp360){
+					--icon-font-size: 16px;
+				}
+			}
+			&:not(.icon--only){
+				padding: 0 16px;
+				height: 41px;
+				-webkit-border-radius: 13px;
+				-moz-border-radius: 13px;
+				border-radius: 13px;
+			}
+		}
+	}
+	&normal{
+		gap: 10px;
+
+		--font-size: 16px;
+		--icon-font-size: 16px;
+		&.use--primary, &.use--secondary {
+			&.icon--only{
+				width: 38px;
+				height: 38px;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+				--icon-font-size: 18px;
+			}
+			&:not(.icon--only){
+				padding: 0 16px;
+				height: 41px;
+				-webkit-border-radius: 13px;
+				-moz-border-radius: 13px;
+				border-radius: 13px;
+			}
+		}
+	}
+	&large{
+		gap: 8px;
+
+		--font-size: 16px;
+		--icon-font-size: 18px;
+		&.use--primary, &.use--secondary {
+			-webkit-border-radius: 13px;
+			-moz-border-radius: 13px;
+			border-radius: 13px;
+			&.icon--only{
+				width: 48px;
+				height: 48px;
+			}
+			&:not(.icon--only){
+				height: 49px;
+				padding: 0 30px;
+			}
+		}
+	}
+}
+
+.icon--{
+	&with{
+
+	}
+	&no{
+
+	}
+	&only{
+
+	}
+}

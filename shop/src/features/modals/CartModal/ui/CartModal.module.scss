@@ -1,0 +1,67 @@
+.modalInner{
+	width: 717px;
+}
+
+.empty{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 40px 0;
+	&Icon{
+		font-size: 56px;
+		color: $accent;
+	}
+	p{
+		margin: 40px 0 10px;
+		font-size: 24px;
+		font-weight: $fwBlack;
+	}
+	span{
+		opacity: .8;
+		font-size: 16px;
+	}
+}
+
+.actions{
+	margin-top: 24px;
+}
+
+.recommendedSlider{
+	margin-top: 30px;
+}
+
+.setsSlider{
+	margin-top: 30px;
+}
+
+@include mediaMax($bp428){
+	.empty{
+		margin: 70px 0;
+		&Icon{
+			font-size: 40px;
+		}
+		p{
+			font-size: 20px;
+			margin: 20px 0 4px;
+		}
+		span{
+			font-size: 14px;
+		}
+	}
+}
+
+@include mediaMax($bp360){
+	.empty{
+		margin: 55px 0;
+		&Icon{
+			font-size: 34px;
+		}
+		p{
+			font-size: 16px;
+			margin: 16px 0 2px;
+		}
+		span{
+			font-size: 12px;
+		}
+	}
+}

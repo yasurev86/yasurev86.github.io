@@ -1,0 +1,49 @@
+.wrapper{
+	display: flex;
+	align-items: center;
+	position: relative;
+	& + &{
+		margin-top: 12px;
+	}
+}
+
+.name{
+	flex: 1;
+}
+
+.count{
+	width: 21px;
+	height: 21px;
+	text-align: center;
+	line-height: 21px;
+	font-size: 12px;
+	font-weight: $fwBold;
+	color: white;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: $accent;
+	flex-shrink: 0;
+}
+
+.icon{
+	width: 36px;
+	height: 36px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: $secondary;
+	text-align: center;
+	line-height: 36px;
+	font-size: 20px;
+	margin-right: 12px;
+	flex-shrink: 0;
+}
+
+.name{
+	font-size: 14px;
+	font-weight: $fwSemiBold;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}

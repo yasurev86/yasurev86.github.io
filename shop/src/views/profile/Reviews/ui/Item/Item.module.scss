@@ -1,0 +1,89 @@
+.wrapper{
+	&:not(:last-child){
+		.header{
+			border-bottom: 1px solid rgba($text, .1)
+		}
+	}
+	&._with-review{
+		.header{
+			cursor: pointer;
+
+			@include hover{
+				background-color: white;
+				box-shadow: 0 7px 39.3px 0 rgba(black, .05);
+			}
+		}
+	}
+}
+
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 14px 24px;
+	position: relative;
+	z-index: 1;
+	&--active{
+		background-color: white;
+		box-shadow: 0 7px 39.3px 0 rgba(black, .05);
+	}
+}
+
+.info{
+	display: flex;
+	align-items: center;
+	img{
+		width: 44px;
+		height: 44px;
+		margin-right: 20px;
+	}
+}
+
+.name{
+	font-size: 14px;
+	font-weight: $fwBold;
+
+	@include hover{
+		color: $accent;
+	}
+}
+
+.body{
+	padding: 30px;
+	background-color: rgba(white, .6);
+}
+
+@include mediaMax($bp768){
+	.body{
+		padding: 20px;
+	}
+	.header{
+		padding: 16px 20px;
+	}
+	.info{
+		font-size: 12px;
+		img{
+			width: 28px;
+			height: 28px;
+			margin-right: 16px;
+		}
+	}
+}
+
+.reviewBtn{
+	margin-top: 10px;
+}
+
+.reviewStatus{
+	color: $warning;
+	margin-bottom: 10px;
+	&._approved{
+		color: #118F1D;
+	}
+}
+
+@include mediaMax($bp428){
+	.header, .body{
+		background-color: white;
+	}
+}

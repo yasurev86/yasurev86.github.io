@@ -1,0 +1,82 @@
+.wrapper{
+	padding: 6px 20px;
+	display: flex;
+	align-items: center;
+	gap: 13px;
+	position: relative;
+	height: 36px;
+
+	&:not(._is-skeleton){
+		@include hover{
+			background-color: $secondary;
+
+			.removeBtn{
+				visibility: visible;
+			}
+		}
+
+		.removeBtn{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			visibility: hidden;
+		}
+	}
+}
+
+.removeBtn, .recentIcon{
+	flex-shrink: 0;
+}
+
+.recentIcon{
+	font-size: 16px;
+	color: #A8ABAE;
+}
+
+.name{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	flex: 1;
+	font-size: 14px;
+	font-weight: $fwSemiBold;
+}
+
+.removeBtn{
+	font-size: 24px;
+	width: 1em;
+	height: 1em;
+	z-index: 2;
+
+	@include hover{
+		color: $accent;
+	}
+}
+
+.removeBtnIcon{
+	font-size: 8px;
+}
+
+@include mediaMax($bp768){
+	.wrapper{
+		padding: 6px 15px;
+	}
+}
+
+@include mediaMax($bp360){
+	.wrapper{
+		height: 32px;
+	}
+	.recentIcon{
+		font-size: 13px;
+	}
+	.name{
+		font-size: 12px;
+	}
+	.wrapper{
+		gap: 9px;
+		padding: 4px 10px;
+	}
+	.removeBtn{
+		font-size: 20px;
+	}
+}

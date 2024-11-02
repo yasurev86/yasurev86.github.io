@@ -1,0 +1,50 @@
+.wrapper{
+	font-weight: $fwMedium;
+}
+
+.size--{
+	&default{
+		font-size: 10px;
+	}
+	&small{
+		font-size: 8px;
+	}
+}
+
+.reviewsCount{
+	opacity: .5;
+}
+
+.inner{
+	display: flex;
+	align-items: center;
+	font-size: 1.4em;
+	gap: 6px;
+}
+
+.stars{
+	display: flex;
+	align-items: center;
+	gap: .6em;
+	margin-bottom: .6em;
+}
+
+.star{
+	color: $accent;
+	font-size: 1.14em;
+}
+
+@include mediaMax($bp428){
+	.inner{
+		font-size: 1.2em;
+	}
+	.star{
+		font-size: 1em;
+	}
+}
+
+@include mediaMax($bp360){
+	.inner{
+		font-size: 1em;
+	}
+}

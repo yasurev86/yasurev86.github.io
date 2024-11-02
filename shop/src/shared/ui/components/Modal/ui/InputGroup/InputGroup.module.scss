@@ -1,0 +1,11 @@
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+
+@include mediaMax($bp360){
+	.wrapper{
+		gap: 12px;
+	}
+}

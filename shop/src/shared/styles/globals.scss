@@ -1,0 +1,189 @@
+:root{
+	--header-height: 94px;
+	--header-stuckon-height: 76px;
+	--pre-header-height: 48px;
+	--section-margin: 70px;
+
+	--content-padding: 30px;
+	--content-max-width: 1520px;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: inherit;
+
+	&::selection {
+		background-color: $accent;
+		color: white;
+	}
+}
+
+img {
+	max-width: 100%;
+	width: 100%;
+	vertical-align: bottom;
+}
+
+html{
+	scrollbar-gutter: stable;
+	background-color: $text;
+}
+
+body {
+	width: 100%;
+	min-width: 320px;
+	color: $text;
+	background-color: $foreground;
+	font-family: $fSans;
+
+}
+
+button, a{
+	color: $text;
+}
+
+svg {
+	object-fit: contain;
+	object-position: center;
+}
+
+span,
+p,
+a,
+input,
+button {
+	font-size: inherit;
+}
+
+span,
+p,
+a {
+	font-weight: inherit;
+	letter-spacing: inherit;
+	line-height: inherit;
+	color: inherit;
+}
+
+input,
+textarea {
+	border: unset;
+	min-width: 1px;
+}
+
+button {
+	cursor: pointer;
+	border: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+	border: unset;
+	background: unset;
+}
+
+section {
+	margin: var(--section-margin) 0;
+
+	&:not(._remain-top-margin){
+		&._no-top-margin, &:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&:not(._remain-bottom-margin){
+		&._no-bottom-margin, &:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $fGrotesk;
+}
+
+.line, .word, .char {
+	pointer-events: none;
+}
+
+.content {
+	width: calc(var(--content-max-width) + var(--content-padding) * 2);
+	max-width: 100%;
+	padding: 0 var(--content-padding);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.scrollbar-track{
+	background: rgba(#E3E4EB, .3) !important;
+}
+
+.scrollbar-thumb{
+	background: #E3E4EB !important;
+}
+
+.scrollbar-thumb-x, .scrollbar-track-x{
+	height: 5px !important;
+}
+
+.scrollbar-thumb-y, .scrollbar-track-y{
+	width: 5px !important;
+}
+
+.row{
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	gap: 12px;
+}
+
+@for $i from 1 through 12 {
+	.col_#{$i} {
+		grid-column: span $i;
+	}
+}
+
+@each $breakpoint, $name in ($bp768: 768, $bp428: 428, $bp360: 360) {
+	@include mediaMax ($breakpoint) {
+		@for $i from 1 through 12 {
+			.col_#{$name}_#{$i} {
+				grid-column: span $i;
+			}
+		}
+	}
+}
+
+@include mediaMax($bp1440){
+	:root{
+		--header-height: 84px;
+		--header-stuckon-height: 67px;
+	}
+}
+
+@include mediaMax($bp768){
+	:root{
+		--header-height: 76px;
+		--header-stuckon-height: 60px;
+		--content-padding: 20px;
+		--section-margin: 50px;
+	}
+}
+
+@include mediaMax($bp428){
+	:root{
+		--header-height: 69px;
+		--header-stuckon-height: 69px;
+		--content-padding: 14px;
+		--section-margin: 40px;
+	}
+}
+
+@include mediaMax($bp360){
+	:root{
+		--section-margin: 30px;
+	}
+}

@@ -1,0 +1,19 @@
+.wrapper{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 14px;
+	font-weight: $fwBold;
+}
+
+.variant{
+	&--{
+		&inStock{
+			color: #0E7041;
+		}
+		&outOfStock,
+		&discountinued{
+			opacity: .4;
+		}
+	}
+}

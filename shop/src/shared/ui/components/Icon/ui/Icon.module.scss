@@ -1,0 +1,240 @@
+@font-face {
+	font-family: 'IconFont';
+	src:  url('IconFont.eot?58cg6y');
+	src:  url('IconFont.eot?58cg6y#iefix') format('embedded-opentype'),
+	url('IconFont.ttf?58cg6y') format('truetype'),
+	url('IconFont.woff?58cg6y') format('woff'),
+	url('IconFont.svg?58cg6y#IconFont') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+.icon {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'IconFont' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-history:before {
+	content: "\e935";
+}
+.icon-arrow-down:before {
+	content: "\e900";
+}
+.icon-arrow-left:before {
+	content: "\e901";
+}
+.icon-arrow-left-1:before {
+	content: "\e902";
+}
+.icon-arrow-right:before {
+	content: "\e903";
+}
+.icon-arrow-right-1:before {
+	content: "\e904";
+}
+.icon-arrow-up:before {
+	content: "\e905";
+}
+.icon-bag:before {
+	content: "\e906";
+}
+.icon-bag-bold:before {
+	content: "\e907";
+}
+.icon-bag-reverse:before {
+	content: "\e908";
+}
+.icon-balance:before {
+	content: "\e909";
+}
+.icon-blender:before {
+	content: "\e90a";
+}
+.icon-box-search:before {
+	content: "\e90b";
+}
+.icon-calendar:before {
+	content: "\e90c";
+}
+.icon-call-calling:before {
+	content: "\e90d";
+}
+.icon-checkbox:before {
+	content: "\e90e";
+}
+.icon-close:before {
+	content: "\e90f";
+}
+.icon-close-circle:before {
+	content: "\e910";
+}
+.icon-cooking-panel:before {
+	content: "\e911";
+}
+.icon-delivery:before {
+	content: "\e912";
+}
+.icon-discount:before {
+	content: "\e913";
+}
+.icon-discount-shape:before {
+	content: "\e914";
+}
+.icon-dishes:before {
+	content: "\e915";
+}
+.icon-dishwasher:before {
+	content: "\e916";
+}
+.icon-double-arrow:before {
+	content: "\e917";
+}
+.icon-download:before {
+	content: "\e918";
+}
+.icon-edit:before {
+	content: "\e919";
+}
+.icon-edit-2:before {
+	content: "\e91a";
+}
+.icon-exit:before {
+	content: "\e91b";
+}
+.icon-eye:before {
+	content: "\e91c";
+}
+.icon-eye-slash:before {
+	content: "\e91d";
+}
+.icon-facebook:before {
+	content: "\e91e";
+}
+.icon-fields-size:before {
+	content: "\e91f";
+}
+.icon-filter:before {
+	content: "\e920";
+}
+.icon-gallery:before {
+	content: "\e921";
+}
+.icon-gallery-add:before {
+	content: "\e922";
+}
+.icon-group:before {
+	content: "\e923";
+}
+.icon-hamburger:before {
+	content: "\e924";
+}
+.icon-heart:before {
+	content: "\e925";
+}
+.icon-home:before {
+	content: "\e927";
+}
+.icon-hood:before {
+	content: "\e928";
+}
+.icon-instagram:before {
+	content: "\e929";
+}
+.icon-kitchen:before {
+	content: "\e92a";
+}
+.icon-laundry:before {
+	content: "\e92b";
+}
+.icon-loading:before {
+	content: "\e92c";
+}
+.icon-location:before {
+	content: "\e92d";
+}
+.icon-menu:before {
+	content: "\e92e";
+}
+.icon-microwave:before {
+	content: "\e92f";
+}
+.icon-minus:before {
+	content: "\e930";
+}
+.icon-more:before {
+	content: "\e931";
+}
+.icon-phone:before {
+	content: "\e932";
+}
+.icon-plus:before {
+	content: "\e933";
+}
+.icon-profile:before {
+	content: "\e934";
+}
+.icon-recent:before {
+	content: "\e935";
+}
+.icon-refrigerator:before {
+	content: "\e936";
+}
+.icon-review:before {
+	content: "\e937";
+}
+.icon-right-bottom:before {
+	content: "\e938";
+}
+.icon-search-normal:before {
+	content: "\e939";
+}
+.icon-search-normal-1:before {
+	content: "\e93a";
+}
+.icon-shop_adv:before {
+	content: "\e93b";
+}
+.icon-sidebar-left:before {
+	content: "\e93c";
+}
+.icon-sidebar-right:before {
+	content: "\e93d";
+}
+.icon-sink:before {
+	content: "\e93e";
+}
+.icon-star:before {
+	content: "\e93f";
+}
+.icon-support:before {
+	content: "\e940";
+}
+.icon-trash:before {
+	content: "\e941";
+}
+.icon-up-arrow:before {
+	content: "\e942";
+}
+.icon-warning:before {
+	content: "\e943";
+}
+.icon-youtube:before {
+	content: "\e944";
+}
+.icon-bag-checked:before {
+	content: "\e945";
+}
+.icon-heart-filled:before {
+	content: "\e946";
+}

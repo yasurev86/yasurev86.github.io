@@ -1,0 +1,20 @@
+@include mediaMin($bp768){
+	.wrapper{
+		background-color: rgba($secondary, .3);
+		border: 1px solid rgba($text, .1);
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+		overflow: hidden;
+	}
+}
+
+.header{
+	border-bottom: 1px solid rgba($text, .1);
+}
+
+@include mediaMax($bp428){
+	.header{
+		display: none;
+	}
+}

@@ -1,0 +1,42 @@
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 20px;
+}
+
+.caption{
+	font-size: 16px;
+	font-weight: $fwBlack;
+}
+
+.arrows{
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+
+// TODO: Костыль из-за дублирующихся стилей
+.wrapper .slider{
+	margin-right: calc(-1 * var(--modal-inner-padding-x));
+}
+
+.slide{
+	&:not(:first-child){
+		border-left: 1px solid #F4F4F4;
+	}
+	&:last-child{
+		margin-right: var(--modal-inner-padding-x);
+	}
+}
+
+
+@include mediaMax($bp428){
+	.header{
+		margin-bottom: 13px;
+	}
+	.caption{
+		font-size: 16px;
+	}
+}

@@ -1,0 +1,60 @@
+.header{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 30px;
+	margin-bottom: 30px;
+}
+
+.caption{
+	font-size: 25px;
+	font-weight: $fwBlack;
+}
+
+.products{
+	overflow: hidden;
+}
+
+.nav{
+	display: flex;
+	align-items: center;
+	gap: 30px;
+}
+
+.arrows{
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.showMore{
+	font-size: 14px;
+}
+
+@include mediaMax($bp428){
+	.header{
+		margin-bottom: 20px;
+	}
+	.caption{
+		font-size: 18px;
+	}
+	.wrapper{
+		margin-left: calc(-1 * var(--content-padding));
+		margin-right: calc(-1 * var(--content-padding));
+	}
+	.header{
+		padding: 0 var(--content-padding);
+	}
+}
+
+@include mediaMax($bp360){
+	.caption{
+		font-size: 16px;
+	}
+	.showMore{
+		font-size: 12px;
+	}
+	.nav{
+		gap: 16px;
+	}
+}

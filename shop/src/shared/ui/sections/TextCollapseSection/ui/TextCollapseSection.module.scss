@@ -1,0 +1,54 @@
+.text{
+	line-height: 1.5;
+	font-size: 16px;
+	opacity: .6;
+	&:not(&--opened){
+		-o-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		overflow: hidden;
+		max-height: 4.5em;
+		-webkit-line-clamp: 3;
+		-webkit-box-orient: vertical;
+		cursor: pointer;
+	}
+}
+
+.caption{
+	margin-bottom: 20px;
+	font-weight: $fwHeavy;
+	font-size: 25px;
+}
+
+.toggle{
+	padding-bottom: 8px;
+	border-bottom: 1px solid currentColor;
+	margin-top: 20px;
+	font-weight: $fwBold;
+	font-size: 14px;
+	@include hover{
+		color: $accent;
+	}
+}
+
+@include mediaMax($bp428){
+	.caption{
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+	.toggle{
+		margin-top: 12px;
+	}
+}
+
+@include mediaMax($bp360){
+	.caption{
+		font-size: 16px;
+	}
+	.text{
+		font-size: 13px;
+	}
+	.toggle{
+		font-size: 12px;
+	}
+}

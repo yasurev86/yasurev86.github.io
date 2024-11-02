@@ -1,0 +1,20 @@
+.wrapper{
+	display: grid;
+	grid-template-columns: 323fr 242fr 166fr 99fr 182fr;
+	padding: 16px 21px;
+	font-size: 14px;
+	font-weight: $fwSemiBold;
+	align-items: center;
+}
+
+@include mediaMax($bp1000){
+	.wrapper{
+		grid-template-columns: 142fr 156fr 122fr 76fr 131fr;
+	}
+}
+
+@include mediaMax($bp768){
+	.wrapper{
+		font-size: 12px;
+	}
+}

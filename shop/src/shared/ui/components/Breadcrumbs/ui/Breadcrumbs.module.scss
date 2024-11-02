@@ -1,0 +1,57 @@
+.wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: 15px;
+	gap: .33em;
+
+	a{
+		@include hover {
+			color: $text;
+		}
+	}
+}
+
+
+// TODO: доделать скрытие текста
+.item{
+	color: $gray;
+	position: relative;
+	line-height: 1;
+	&:first-child{
+		span{
+			-webkit-transform: translateY(.05em);
+			-moz-transform: translateY(.05em);
+			-ms-transform: translateY(.05em);
+			-o-transform: translateY(.05em);
+			transform: translateY(.05em);
+			display: inline-block;
+		}
+	}
+	&:not(:first-child){
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		max-width: 50%;
+		span{
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+	&:not(:last-child){
+		&::after{
+			content: '/';
+			margin-left: .33em;
+			opacity: .6;
+			pointer-events: none;
+			flex-shrink: none;
+		}
+	}
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		font-size: 12px;
+	}
+}

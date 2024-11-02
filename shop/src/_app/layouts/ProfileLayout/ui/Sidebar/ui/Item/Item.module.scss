@@ -1,0 +1,28 @@
+.wrapper{
+	position: relative;
+	padding: 12px 13px;
+	display: flex;
+	gap: 15px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+	cursor: pointer;
+	&._is-selected, &:hover{
+		background-color: rgba($accent, .05);
+	}
+	&._is-selected .name{
+		color: $accent;
+	}
+}
+
+.icon{
+	font-size: 20px;
+	color: $accent;
+}
+
+.name{
+	font-size: 15px;
+	font-weight: $fwSemiBold;
+	line-height: (22/15);
+}

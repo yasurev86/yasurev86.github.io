@@ -1,0 +1,13 @@
+.wrapper{
+	border: 2px solid red;
+	padding: 2px;
+	p{
+		font-weight: bold;
+		font-size: 20px;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+	& + &{
+		margin-top: 10px;
+	}
+}

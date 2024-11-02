@@ -1,0 +1,178 @@
+.wrapper{
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	background-color: white;
+	padding: 46px 74px;
+	position: relative;
+}
+
+.nav{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-top: 46px;
+}
+
+.dots{
+	display: flex;
+	align-items: center;
+	gap: 7px;
+	span{
+		width: 8px;
+		height: 8px;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		background-color: #CDD0DC;
+		cursor: pointer;
+		@include hover{
+			background-color: darken(#CDD0DC, 10%);
+		}
+		&.active{
+			background-color: $accent;
+		}
+	}
+}
+
+.container{
+	display: grid;
+	grid-template-columns: 1fr 228px;
+	gap: 30px;
+}
+
+.image{
+	width: 228px;
+	height: 228px;
+	position: relative;
+}
+
+.name{
+	font-size: 26px;
+	font-weight: $fwSemiBold;
+	margin-bottom: 14px;
+	display: inline-block;
+	@include hover{
+		color: $accent;
+	}
+}
+
+.promoDuration{
+	margin-bottom: 30px;
+	span{
+		color: $accent;
+	}
+}
+
+.price{
+	margin-bottom: 24px;
+}
+
+.oldPrice{
+	font-size: 18px;
+}
+
+.actualPrice{
+	font-size: 36px;
+}
+
+.discount{
+	font-size: 15px;
+}
+
+.label{
+	padding: 7px 19px 9px;
+	background-color: $accent;
+	-webkit-border-radius: 9px;
+	-moz-border-radius: 9px;
+	border-radius: 9px;
+	color: white;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform-origin: left top;
+	-webkit-transform: rotate(-90deg) translateX(-100%);
+	-moz-transform: rotate(-90deg) translateX(-100%);
+	-ms-transform: rotate(-90deg) translateX(-100%);
+	-o-transform: rotate(-90deg) translateX(-100%);
+	transform: rotate(-90deg) translateX(-100%);
+	font-size: 14px;
+}
+
+.cartBtn{
+	width: 182px;
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+		padding: 40px 14px;
+		text-align: center;
+	}
+	.container{
+		display: flex;
+		grid-template-columns: unset;
+		flex-direction: column;
+		align-items: center;
+	}
+	.price{
+		margin-bottom: 40px;
+	}
+	.productInfo{
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.nav{
+		margin: 30px auto 0;
+	}
+	.cartBtn{
+		margin: 0 auto;
+		width: 100%;
+	}
+	.image{
+		margin: 0 auto 20px;
+		width: 150px;
+		height: 150px;
+	}
+	.name{
+		font-size: 20px;
+		margin-bottom: 8px;
+	}
+	.promoDuration{
+		font-size: 13px;
+		margin-bottom: 24px;
+	}
+	.actualPrice{
+		font-size: 26px;
+	}
+	.discount{
+		font-size: 13px;
+	}
+}
+
+@include mediaMax($bp360){
+	.name{
+		font-size: 16px;
+	}
+	.promoDuration{
+		font-size: 12px;
+	}
+	.actualPrice{
+		font-size: 22px;
+	}
+	.discount{
+		font-size: 10px;
+	}
+	.image{
+		width: 122px;
+		height: 122px;
+		margin-bottom: 24px;
+	}
+	.wrapper{
+		padding: 34px 14px;
+	}
+}

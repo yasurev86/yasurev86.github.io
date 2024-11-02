@@ -1,0 +1,161 @@
+$dividerColor: #353F4A;
+
+.wrapper{
+	padding: 60px 0 10px;
+	background-color: $text;
+	margin-top: var(--section-margin);
+}
+
+.blocks{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	gap: 77px;
+	margin-bottom: 90px;
+	grid-template-areas: 'a b c d e f';
+}
+
+.footer{
+	border-top: 1px solid $dividerColor;
+}
+
+.link{
+	display: block;
+	width: max-content;
+	font-size: 15px;
+	font-weight: $fwMedium;
+	color: rgba(white, .5);
+	padding: 7.5px 0;
+	@include hover{
+		color: rgba(white, .9);
+	}
+}
+
+.phone{
+	font-size: 24px;
+	white-space: nowrap;
+}
+
+.phone, .email{
+	@include hover{
+		text-decoration: underline;
+	}
+}
+
+.social{
+	margin-top: 22px;
+}
+
+.footer{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo{
+	color: white;
+	width: 81px;
+}
+
+.divider{
+	margin: 0 30px;
+	height: 32px;
+	border-left: 1px solid $dividerColor;
+}
+
+.copy{
+	font-weight: $fwMedium;
+	font-size: 15px;
+	flex: 1;
+	text-align: right;
+	color: rgba(white, .5);
+}
+
+.payment{
+	display: flex;
+	align-items: center;
+}
+
+@include mediaMax($bp1440){
+	.blocks{
+		gap: 20px;
+	}
+}
+
+@media screen and (min-width: 768px){
+	.block{
+		&:nth-child(1){
+			grid-area: a;
+		}
+		&:nth-child(2){
+			grid-area: b;
+		}
+		&:nth-child(3){
+			grid-area: c;
+		}
+		&:nth-child(4){
+			grid-area: d;
+		}
+		&:nth-child(5){
+			grid-area: e;
+		}
+		&:nth-child(6){
+			grid-area: f;
+		}
+	}
+}
+
+@include mediaMax($bp1000){
+	.blocks{
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-areas: 'a b c f' 'd e _ f';
+		gap: 60px 47px;
+	}
+	.copy{
+		flex: unset;
+		text-align: left;
+		font-size: 14px;
+	}
+	.footer{
+		margin-top: 20px;
+	}
+	.developedBy{
+		flex: 1
+	}
+}
+
+@include mediaMax($bp768){
+	.blocks{
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: 'a b f' 'd e f' 'c _ f';
+	}
+	.phone{
+		font-size: 18px;
+	}
+}
+
+@include mediaMax($bp428){
+	.wrapper{
+		padding: 16px 0;
+	}
+	.blocks{
+		grid-template-columns: unset;
+		grid-template-areas: unset;
+		gap: 0;
+		margin-bottom: 40px;
+	}
+	.copy{
+		margin-bottom: 10px;
+		font-size: 12px;
+	}
+	.divider{
+		margin: 0 20px;
+	}
+	.logo{
+		width: 54px;
+		height: 54px;
+	}
+	.footer{
+		padding-top: 10px;
+		margin-top: 33px;
+	}
+}

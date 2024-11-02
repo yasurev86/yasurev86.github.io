@@ -1,0 +1,43 @@
+.wrapper{
+	padding: .35em .7em;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	line-height: (22/14);
+	display: inline-block;
+
+	color: var(--color);
+	&::before{
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--color);
+		opacity: .1;
+		z-index: -1;
+	}
+}
+
+.type{
+	&--{
+		&completed{
+			--color: #118F1D;
+		}
+		&cancelled{
+			--color: #C90000;
+		}
+		&payment,
+		&paymentProblem,
+		&collect,
+		&delivery,
+		&reception
+		{
+			--color: #F1790A;
+		}
+	}
+}

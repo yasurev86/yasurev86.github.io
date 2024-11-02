@@ -1,0 +1,22 @@
+.wrapper{
+	overflow: hidden;
+}
+
+.wrapper, .image{
+	width: 100%;
+	height: 100%;
+}
+
+.image{
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	will-change: transform;
+	&--active{
+		-webkit-transform: scale(2) translate(var(--x, 0), var(--y, 0));
+		-moz-transform: scale(2) translate(var(--x, 0), var(--y, 0));
+		-ms-transform: scale(2) translate(var(--x, 0), var(--y, 0));
+		-o-transform: scale(2) translate(var(--x, 0), var(--y, 0));
+		transform: scale(2) translate(var(--x, 0), var(--y, 0));
+	}
+}

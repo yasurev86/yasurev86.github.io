@@ -1,0 +1,96 @@
+.container{
+	display: grid;
+	grid-template-columns: 346px 1fr;
+	gap: 20px;
+}
+
+.sidebarContainer{
+	position: relative;
+}
+
+.loginContainer{
+	grid-column: 1 / -1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	gap: 20px;
+	height: 50vh;
+}
+
+.sidebar{
+	position: sticky;
+	top: calc(var(--header-stuckon-height) + 30px);
+}
+
+.main{
+	padding: 40px;
+	background-color: white;
+	-webkit-border-radius: 24px;
+	-moz-border-radius: 24px;
+	border-radius: 24px;
+	overflow: hidden;
+}
+
+.advantages{
+	margin-top: 100px;
+}
+
+.caption{
+	margin-bottom: 32px;
+	font-size: 22px;
+	font-weight: $fwSemiBold;
+}
+
+@include mediaMax($bp1440){
+	.advantages{
+		margin-top: 70px;
+	}
+}
+
+@include mediaMax($bp1000){
+	.advantages{
+		margin-top: 20px;
+	}
+	.sidebar{
+		display: none;
+	}
+	.container{
+		display: block;
+		grid-template-columns: unset;
+	}
+}
+
+@include mediaMax($bp768){
+	.main{
+		padding: 30px;
+	}
+	.caption{
+		margin-bottom: 20px;
+	}
+}
+
+@include mediaMax($bp428){
+	.main{
+		padding: unset;
+		background-color: unset;
+		-webkit-border-radius: unset;
+		-moz-border-radius: unset;
+		border-radius: unset;
+	}
+	.caption{
+		margin-bottom: 16px;
+		font-size: 18px;
+	}
+}
+
+@include mediaMax($bp360){
+	.caption{
+		margin-bottom: 14px;
+		font-size: 16px;
+	}
+	.advantages{
+		margin-top: 16px;
+	}
+}
