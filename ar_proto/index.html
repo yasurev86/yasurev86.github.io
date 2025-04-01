@@ -2,135 +2,95 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Markerless AR Red Sphere</title>
-	<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+	<title>Location-Based AR with Random Spheres</title>
+	<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+	<script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
 	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 	<style>
 		body {
 			margin: 0;
-			padding: 0;
 			overflow: hidden;
 		}
-		.arjs-loader {
-			height: 100%;
-			width: 100%;
+		#info {
 			position: absolute;
-			top: 0;
-			left: 0;
-			background-color: rgba(0, 0, 0, 0.8);
-			z-index: 9999;
-			display: flex;
-			justify-content: center;
-			align-items: center;
+			top: 10px;
+			left: 10px;
 			color: white;
-		}
-		#placement-info {
-			position: absolute;
-			bottom: 20px;
-			left: 0;
-			right: 0;
-			text-align: center;
-			color: white;
-			background-color: rgba(0, 0, 0, 0.5);
+			background-color: rgba(0,0,0,0.5);
 			padding: 10px;
-			z-index: 1000;
-		}
-		#place-button {
-			position: absolute;
-			bottom: 80px;
-			left: 50%;
-			transform: translateX(-50%);
-			padding: 10px 20px;
-			background-color: #4CAF50;
-			color: white;
-			border: none;
 			border-radius: 5px;
-			font-size: 16px;
 			z-index: 1000;
 		}
 	</style>
 </head>
 <body>
-<!-- Loading message -->
-<div class="arjs-loader">
-	<div>Loading AR experience...</div>
+<div id="info">
+	Location-Based AR: 10 Random Red Spheres<br>
+	Your position: <span id="position">Acquiring...</span>
 </div>
 
-<!-- Placement instructions -->
-<div id="placement-info">
-	Move your device to detect surfaces, then tap the button to place the sphere
-</div>
+<a-scene vr-mode-ui="enabled: false" arjs="sourceType: webcam; detectionMode: mono; debugUIEnabled: false;">
+	<a-camera gps-camera rotation-reader></a-camera>
 
-<!-- Placement button -->
-<button id="place-button" style="display: none;">Place Red Sphere</button>
+	<!-- This will be populated with random spheres -->
+	<a-entity id="spheres-container"></a-entity>
 
-<!-- AR Scene -->
-<a-scene
-	vr-mode-ui="enabled: false"
-	embedded
-	arjs="sourceType: webcam; debugUIEnabled: false; trackingMethod: best;"
-	renderer="logarithmicDepthBuffer: true;"
-	gesture-detector
->
-	<!-- Red sphere that will be placed -->
-	<a-entity id="sphere-entity" visible="false">
-		<a-sphere
-			position="0 0 0"
-			radius="0.2"
-			color="red"
-			material="shader: standard; metalness: 0.3; roughness: 0.4"
-		></a-sphere>
-	</a-entity>
-
-	<!-- Camera -->
-	<a-entity camera></a-entity>
+	<!-- User location indicator -->
+	<a-sphere
+		radius="5"
+		color="blue"
+		gps-entity-place="latitude: 0; longitude: 0"
+		look-at="[gps-camera]">
+	</a-sphere>
 </a-scene>
 
 <script>
-  // Hide loader once scene is loaded
-  const scene = document.querySelector('a-scene');
-  const placeButton = document.getElementById('place-button');
-  const placementInfo = document.getElementById('placement-info');
-  const sphereEntity = document.getElementById('sphere-entity');
+  document.addEventListener('DOMContentLoaded', function() {
+    const scene = document.querySelector('a-scene');
+    const container = document.querySelector('#spheres-container');
+    const positionDisplay = document.querySelector('#position');
 
-  let spherePlaced = false;
+    // Wait for GPS to be ready
+    scene.addEventListener('gps-camera-update-position', function(e) {
+      const position = e.detail.position;
+      positionDisplay.textContent = `Lat: ${position.latitude.toFixed(6)}, Long: ${position.longitude.toFixed(6)}`;
 
-  scene.addEventListener('loaded', function() {
-    document.querySelector('.arjs-loader').style.display = 'none';
-    placeButton.style.display = 'block';
+      // Clear any existing spheres
+      container.innerHTML = '';
 
-    // Add click/tap event for placing the sphere
-    placeButton.addEventListener('click', placeSphere);
-    scene.addEventListener('click', placeSphere);
+      // Generate 10 random spheres around the user
+      for (let i = 0; i < 10; i++) {
+        createRandomSphere(position.latitude, position.longitude);
+      }
+    });
+
+    function createRandomSphere(userLat, userLon) {
+      // Generate random distance (10-50 meters) and angle
+      const distance = 10 + Math.random() * 40; // 10-50 meters
+      const angle = Math.random() * Math.PI * 2; // 0-2π radians
+
+      // Convert polar coordinates (distance, angle) to latitude/longitude offsets
+      // This is a simplified calculation - for more accuracy, use proper geospatial functions
+      const earthRadius = 6378137; // meters
+      const latOffset = (distance * Math.cos(angle)) / earthRadius * (180 / Math.PI);
+      const lonOffset = (distance * Math.sin(angle)) / earthRadius * (180 / Math.PI) / Math.cos(userLat * Math.PI/180);
+
+      const sphereLat = userLat + latOffset;
+      const sphereLon = userLon + lonOffset;
+
+      // Create the sphere entity
+      const sphere = document.createElement('a-sphere');
+      sphere.setAttribute('radius', '2');
+      sphere.setAttribute('color', 'red');
+      sphere.setAttribute('gps-entity-place', {
+        latitude: sphereLat,
+        longitude: sphereLon
+      });
+      sphere.setAttribute('look-at', '[gps-camera]');
+
+      container.appendChild(sphere);
+    }
   });
-
-  function placeSphere() {
-    if (spherePlaced) return;
-
-    // Get camera position and direction
-    const camera = document.querySelector('[camera]');
-    const cameraPos = camera.getAttribute('position');
-    const cameraRotation = camera.getAttribute('rotation');
-
-    // Calculate position 1 meter in front of camera
-    const distance = 1;
-    const theta = THREE.MathUtils.degToRad(cameraRotation.y);
-    const x = cameraPos.x - Math.sin(theta) * distance;
-    const z = cameraPos.z - Math.cos(theta) * distance;
-    const y = cameraPos.y;
-
-    // Position the sphere
-    sphereEntity.setAttribute('position', {x, y, z});
-    sphereEntity.setAttribute('visible', 'true');
-
-    // Update UI
-    spherePlaced = true;
-    placeButton.style.display = 'none';
-    placementInfo.textContent = "Sphere placed! Move around to view it from different angles";
-
-    // Make it stay in world space
-    sphereEntity.setAttribute('static-body', '');
-  }
 </script>
 </body>
 </html>
